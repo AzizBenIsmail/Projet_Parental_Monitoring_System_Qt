@@ -13,5 +13,4 @@ public:
     QString GetPassword();
     admin();
 };
-
 #endif // ADMIN_H

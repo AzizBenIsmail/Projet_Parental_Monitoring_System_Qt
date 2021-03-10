@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,17 +20,20 @@ SOURCES += \
     aide.cpp \
     animal.cpp \
     calculator.cpp \
+    connection.cpp \
     contact.cpp \
     cuisine.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    medic.cpp \
     medicament.cpp \
     menu.cpp \
     note.cpp \
     programme.cpp \
     sante.cpp \
     securite.cpp \
+    suivi.cpp \
     suivie_medical.cpp
 
 HEADERS += \
@@ -38,16 +41,19 @@ HEADERS += \
     aide.h \
     animal.h \
     calculator.h \
+    connection.h \
     contact.h \
     cuisine.h \
     login.h \
     mainwindow.h \
+    medic.h \
     medicament.h \
     menu.h \
     note.h \
     programme.h \
     sante.h \
     securite.h \
+    suivi.h \
     suivie_medical.h
 
 FORMS += \

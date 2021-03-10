@@ -1,6 +1,6 @@
 #ifndef SUIVIE_MEDICAL_H
 #define SUIVIE_MEDICAL_H
-
+#include"suivi.h"
 #include <QDialog>
 
 namespace Ui {
@@ -20,8 +20,13 @@ private slots:
 
     void on_pushButton_Q_clicked();
 
+    void on_pushButton_ajouter_clicked();
+
+    void on_pushButton_S_clicked();
+
 private:
     Ui::Suivie_medical *ui;
+    suivi e;
 };
 
 #endif // SUIVIE_MEDICAL_H

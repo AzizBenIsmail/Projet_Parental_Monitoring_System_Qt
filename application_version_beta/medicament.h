@@ -1,6 +1,6 @@
 #ifndef MEDICAMENT_H
 #define MEDICAMENT_H
-
+#include "medic.h"
 #include <QDialog>
 
 namespace Ui {
@@ -20,8 +20,13 @@ private slots:
 
     void on_pushButton_Q_clicked();
 
+    void on_pushButton_ajouter_clicked();
+
+    void on_pushButton_S_clicked();
+
 private:
     Ui::medicament *ui;
+    Medic c;
 };
 
 #endif // MEDICAMENT_H

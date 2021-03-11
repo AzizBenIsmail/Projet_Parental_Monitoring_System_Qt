@@ -224,14 +224,17 @@
     <string>Animail</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_1">
+  <widget class="QPushButton" name="pushButton_123">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>740</y>
-     <width>113</width>
-     <height>20</height>
+     <x>430</x>
+     <y>590</y>
+     <width>75</width>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
    </property>
   </widget>
   <zorder>label_ph</zorder>
@@ -245,7 +248,7 @@
   <zorder>pushButton_Q</zorder>
   <zorder>Digital_clock</zorder>
   <zorder>pushButton_a_2</zorder>
-  <zorder>lineEdit_1</zorder>
+  <zorder>pushButton_123</zorder>
  </widget>
  <resources/>
  <connections/>

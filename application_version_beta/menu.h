@@ -49,6 +49,8 @@ private slots:
 
     void on_pushButton_cuisine_clicked();
 
+    void on_pushButton_123_clicked();
+
 private:
     Ui::Menu *ui;
 };

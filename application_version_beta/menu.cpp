@@ -11,6 +11,7 @@
 #include "contact.h"
 #include "programme.h"
 #include "cuisine.h"
+#include "suivie_medical.h"
 Menu::Menu(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Menu)
@@ -70,11 +71,7 @@ void Menu::on_pushButton_Q_clicked()
         }
 }
 
-void Menu::setClient(admin l)
-{
-    ui->lineEdit_1->setText(l.GetLogin());
 
-}
 void Menu::on_pushButton_Sante_clicked()
 {
     hide();
@@ -116,4 +113,11 @@ void Menu::on_pushButton_cuisine_clicked()
     hide();
     cuisine cu;
     cu.exec();
+}
+
+void Menu::on_pushButton_123_clicked()
+{
+    hide();
+    Suivie_medical s;
+    s.exec();
 }

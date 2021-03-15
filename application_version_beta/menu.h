@@ -51,6 +51,10 @@ private slots:
 
     void on_pushButton_123_clicked();
 
+    void on_Button_cuisine_clicked();
+
+    void on_pushButton_cui_clicked();
+
 private:
     Ui::Menu *ui;
 };

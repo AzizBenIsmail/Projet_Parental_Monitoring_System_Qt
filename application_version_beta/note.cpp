@@ -68,3 +68,18 @@ void Note::on_pushButton_lire_clicked()
 ui->plainTextEdit->setPlainText(text);
 file.close();
 }
+
+void Note::on_pushButton_Q_clicked()
+{
+    int reponse = QMessageBox::question(this, "Interrogatoire", "Monsieur esque tu est sur tu veux quitter?", QMessageBox ::Yes | QMessageBox::No);
+
+        if (reponse == QMessageBox::Yes)
+        {
+            QMessageBox::critical(this, "bayy bayy", "Ala pouchane !");
+            close();
+        }
+        else if (reponse == QMessageBox::No)
+        {
+            QMessageBox::information(this, "Helloo", "Alors bienvenue!");
+        }
+}

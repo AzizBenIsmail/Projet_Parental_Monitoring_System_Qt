@@ -3,6 +3,7 @@
 #include "menu.h"
 #include <QPixmap>
 #include "QString"
+#include <QMessageBox>
 Securite::Securite(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Securite)
@@ -30,3 +31,18 @@ void Securite::on_pushButton_clicked()
 }
 
 
+
+void Securite::on_pushButton_Q_clicked()
+{
+    int reponse = QMessageBox::question(this, "Interrogatoire", "Monsieur esque tu est sur tu veux quitter?", QMessageBox ::Yes | QMessageBox::No);
+
+        if (reponse == QMessageBox::Yes)
+        {
+            QMessageBox::critical(this, "bayy bayy", "Ala pouchane !");
+            close();
+        }
+        else if (reponse == QMessageBox::No)
+        {
+            QMessageBox::information(this, "Helloo", "Alors bienvenue!");
+        }
+}

@@ -770,6 +770,19 @@ QPushButton:pressed {
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_Q">
+   <property name="geometry">
+    <rect>
+     <x>1120</x>
+     <y>770</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </widget>
   <zorder>label_ph</zorder>
   <zorder>Button3</zorder>
   <zorder>MemClear</zorder>
@@ -793,6 +806,7 @@ QPushButton:pressed {
   <zorder>Button1</zorder>
   <zorder>Button7</zorder>
   <zorder>pushButton_r</zorder>
+  <zorder>pushButton_Q</zorder>
  </widget>
  <resources/>
  <connections/>

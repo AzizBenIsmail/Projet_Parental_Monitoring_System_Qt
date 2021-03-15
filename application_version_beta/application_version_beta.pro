@@ -31,8 +31,7 @@ SOURCES += \
     programme.cpp \
     sante.cpp \
     securite.cpp \
-    suivi.cpp \
-    suivie_medical.cpp
+    suivi.cpp
 
 HEADERS += \
     admin.h \
@@ -49,8 +48,7 @@ HEADERS += \
     programme.h \
     sante.h \
     securite.h \
-    suivi.h \
-    suivie_medical.h
+    suivi.h
 
 FORMS += \
     aide.ui \
@@ -64,8 +62,7 @@ FORMS += \
     note.ui \
     programme.ui \
     sante.ui \
-    securite.ui \
-    suivie_medical.ui
+    securite.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -2,7 +2,6 @@
 #include "ui_sante.h"
 #include "menu.h"
 #include <QPixmap>
-#include "suivie_medical.h"
 #include "QMessageBox"
 #include"suivi.h"
 #include <QIntValidator>
@@ -35,12 +34,6 @@ void Sante::on_pushButton_clicked()
     m.exec();
 }
 
-void Sante::on_pushButton_S_clicked()
-{
-    hide();
-    Suivie_medical s;
-    s.exec();
-}
 
 
 

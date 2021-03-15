@@ -23,6 +23,8 @@ private slots:
 
     void on_pushButton_lire_clicked();
 
+    void on_pushButton_Q_clicked();
+
 private:
     Ui::Note *ui;
 };

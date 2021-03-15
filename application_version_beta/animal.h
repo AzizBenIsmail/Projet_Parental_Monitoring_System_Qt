@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_R_clicked();
 
+    void on_pushButton_Q_clicked();
+
 private:
     Ui::Animal *ui;
 };

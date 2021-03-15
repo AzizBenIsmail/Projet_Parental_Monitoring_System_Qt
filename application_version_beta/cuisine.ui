@@ -52,9 +52,23 @@
     <string>Retour au menu</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_Q">
+   <property name="geometry">
+    <rect>
+     <x>1120</x>
+     <y>770</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </widget>
   <zorder>label_ph</zorder>
   <zorder>label</zorder>
   <zorder>pushButton</zorder>
+  <zorder>pushButton_Q</zorder>
  </widget>
  <resources/>
  <connections/>

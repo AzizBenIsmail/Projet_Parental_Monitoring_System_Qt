@@ -70,7 +70,7 @@ if((l.GetLogin()=="Admin@esprit.tn")&&(l.GetPassword()=="Admin"))
 {
     hide();
     Menu m;
-    m.setClient(l);
+    //m.setClient(l);
     m.exec();
 
 }else

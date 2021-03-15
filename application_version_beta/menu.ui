@@ -66,26 +66,6 @@
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_cuisine">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>460</y>
-     <width>131</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>cuisine</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_a">
    <property name="geometry">
     <rect>
@@ -224,17 +204,24 @@
     <string>Animail</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_123">
+  <widget class="QPushButton" name="pushButton_cui">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>590</y>
-     <width>75</width>
-     <height>23</height>
+     <x>370</x>
+     <y>460</y>
+     <width>131</width>
+     <height>51</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>cuisine</string>
    </property>
   </widget>
   <zorder>label_ph</zorder>
@@ -243,12 +230,11 @@
   <zorder>pushButton_Securite</zorder>
   <zorder>pushButton_programme</zorder>
   <zorder>pushButton_logout</zorder>
-  <zorder>pushButton_cuisine</zorder>
   <zorder>pushButton_a</zorder>
   <zorder>pushButton_Q</zorder>
   <zorder>Digital_clock</zorder>
   <zorder>pushButton_a_2</zorder>
-  <zorder>pushButton_123</zorder>
+  <zorder>pushButton_cui</zorder>
  </widget>
  <resources/>
  <connections/>

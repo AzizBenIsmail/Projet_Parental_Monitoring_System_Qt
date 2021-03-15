@@ -11,7 +11,6 @@
 #include "contact.h"
 #include "programme.h"
 #include "cuisine.h"
-#include "suivie_medical.h"
 Menu::Menu(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Menu)
@@ -108,16 +107,9 @@ void Menu::on_pushButton_programme_clicked()
 
 }
 
-void Menu::on_pushButton_cuisine_clicked()
+void Menu::on_pushButton_cui_clicked()
 {
     hide();
-    cuisine cu;
-    cu.exec();
-}
-
-void Menu::on_pushButton_123_clicked()
-{
-    hide();
-    Suivie_medical s;
-    s.exec();
+    cuisine cui;
+    cui.exec();
 }

@@ -2,7 +2,7 @@
 #include "ui_calculator.h"
 #include "aide.h"
 #include <QPixmap>
-
+#include <QMessageBox>
 // Holds current value of calculation
 double calcVal = 0.0;
 
@@ -177,4 +177,19 @@ void calculator::on_pushButton_r_clicked()
     hide();
     aide a;
     a.exec();
+}
+
+void calculator::on_pushButton_Q_clicked()
+{
+    int reponse = QMessageBox::question(this, "Interrogatoire", "Monsieur esque tu est sur tu veux quitter?", QMessageBox ::Yes | QMessageBox::No);
+
+        if (reponse == QMessageBox::Yes)
+        {
+            QMessageBox::critical(this, "bayy bayy", "Ala pouchane !");
+            close();
+        }
+        else if (reponse == QMessageBox::No)
+        {
+            QMessageBox::information(this, "Helloo", "Alors bienvenue!");
+        }
 }

@@ -16,10 +16,10 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>190</y>
-     <width>471</width>
-     <height>441</height>
+     <x>460</x>
+     <y>170</y>
+     <width>611</width>
+     <height>251</height>
     </rect>
    </property>
    <property name="title">
@@ -28,14 +28,14 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>431</width>
-      <height>371</height>
+      <x>40</x>
+      <y>10</y>
+      <width>521</width>
+      <height>221</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;bonjour et bienvenu &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dans notre application&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Aziz ben ismail&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Yassin hkiri&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Haythem&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;lina &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Lamis &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Shayma&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;bonjour et bienvenu &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;dans notre application&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Aziz ben ismail,Yassin hkiri,Haythem,lina,Lamis,Shayma&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
@@ -70,7 +70,7 @@
     <rect>
      <x>10</x>
      <y>180</y>
-     <width>451</width>
+     <width>421</width>
      <height>481</height>
     </rect>
    </property>
@@ -141,6 +141,16 @@
     <string>Calculatrise</string>
    </property>
   </widget>
+  <widget class="QCalendarWidget" name="calendarWidget">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>430</y>
+     <width>501</width>
+     <height>261</height>
+    </rect>
+   </property>
+  </widget>
   <zorder>label_p</zorder>
   <zorder>label_ph</zorder>
   <zorder>groupBox</zorder>
@@ -149,6 +159,7 @@
   <zorder>Digital_clock</zorder>
   <zorder>pushButton_note</zorder>
   <zorder>pushButton_Cal</zorder>
+  <zorder>calendarWidget</zorder>
  </widget>
  <resources/>
  <connections/>

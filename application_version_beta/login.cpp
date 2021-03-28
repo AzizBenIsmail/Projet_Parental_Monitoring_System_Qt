@@ -6,6 +6,7 @@
 #include"menu.h"
 #include <QTimer>
 #include <QDateTime>
+#include <QDebug>
 #include "securite.h"
 Login::Login(QWidget *parent) :
     QDialog(parent),

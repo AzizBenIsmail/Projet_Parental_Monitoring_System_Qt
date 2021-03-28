@@ -26,6 +26,7 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    medicament.cpp \
     menu.cpp \
     note.cpp \
     programme.cpp \
@@ -43,6 +44,7 @@ HEADERS += \
     cuisine.h \
     login.h \
     mainwindow.h \
+    medicament.h \
     menu.h \
     note.h \
     programme.h \

@@ -343,17 +343,73 @@ void Sante::on_pushm_clicked()
         double Quantite=ui->_Quantite->text().toDouble();
         double Prix=ui->Prix->text().toDouble();
         QString date=ui->_date_m->text();
-     MEDICAMENT m(id,Quantite,Prix,date);
-   /* bool test=m.modifier(id,date);
-    if(test)
-     {    QMessageBox::information(nullptr, QObject::tr("modify avec succes"),
-                                   QObject::tr("modify successful.\n"
-                                               "Click Cancel to exit."), QMessageBox::Cancel);
-        ui->tableView_aff_m->setModel(m.afficher());
+         if (id <= 0 )
+         {
+             QMessageBox::critical(nullptr, QObject::tr("problem id"),
+                         QObject::tr("verifier id\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
 
-               }
-                   else
-                       QMessageBox::critical(nullptr, QObject::tr("modify error"),
-                                   QObject::tr("modify failed.\n"
-                                               "Click Cancel to exit."), QMessageBox::Cancel);*/
+         }
+         else if (Quantite < 0 )
+         {
+             QMessageBox::critical(nullptr, QObject::tr("problem Quantite"),
+                         QObject::tr("verifier taille\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+
+         }
+        else  if (Prix < 0  )
+         {
+             QMessageBox::critical(nullptr, QObject::tr("problem Prix"),
+                         QObject::tr("verifier poid\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+
+         }
+         else if (date== ""  )
+         {
+             QMessageBox::critical(nullptr, QObject::tr("problem date"),
+                         QObject::tr("verifier date\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+
+         }
+         else
+         {
+          MEDICAMENT m1(id,Quantite,Prix,date);
+          bool test=m1.modifier(id,date);
+
+         if(test)
+          {    QMessageBox::information(nullptr, QObject::tr("modify avec succes"),
+                                        QObject::tr("modify successful.\n"
+                                                    "Click Cancel to exit."), QMessageBox::Cancel);
+            ui->tableView_aff_m->setModel(m.afficher());
+
+                    }
+                        else
+                            QMessageBox::critical(nullptr, QObject::tr("modify error"),
+                                        QObject::tr("modify failed.\n"
+                                                    "Click Cancel to exit."), QMessageBox::Cancel);
+       }
 }
+
+void Sante::on_pushButton_3_clicked()
+{
+       ui->tableView_aff_m->setModel(m.recherche_faible());
+
+}
+
+void Sante::on_pushButton_Moyenne_clicked()
+{
+    ui->tableView_aff_m->setModel(m.recherche_moye());
+}
+
+
+void Sante::on_pushButton_chere_clicked()
+{
+    ui->tableView_aff_m->setModel(m.recherche_chere());
+
+}
+/*
+void Sante::on_pushButton_Recherche_clicked()
+{       int id=ui->_id_m->text().toInt();
+    ui->tableView_aff_m->setModel(m.recherche(id));
+}
+*/

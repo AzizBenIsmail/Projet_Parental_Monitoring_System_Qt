@@ -58,6 +58,16 @@ private slots:
 
     void on_pushm_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_Moyenne_clicked();
+
+    void on_pushButton_Chaire_clicked();
+
+    void on_pushButton_chere_clicked();
+
+    void on_pushButton_Recherche_clicked();
+
 private:
     Ui::Sante *ui;
     suivi e;

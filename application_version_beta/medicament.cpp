@@ -68,10 +68,10 @@ QSqlQueryModel *MEDICAMENT::afficher()
 {
   QSqlQueryModel *model=new QSqlQueryModel();
         model->setQuery("SELECT * FROM MEDICAMENT");
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifain"));
-        model->setHeaderData(1, Qt::Horizontal, QObject::tr("quantite"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("date limite"));
-        model->setHeaderData(3, Qt::Horizontal, QObject::tr("prix"));
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifain"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Quantite"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date limite"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Prix"));
         return model;
 }
 bool MEDICAMENT::Supprime(int id)
@@ -92,38 +92,116 @@ QSqlQueryModel *MEDICAMENT::afficher_qt()
 {
   QSqlQueryModel *model=new QSqlQueryModel();
         model->setQuery("SELECT * FROM MEDICAMENT ORDER BY quantite");
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifain"));
-        model->setHeaderData(1, Qt::Horizontal, QObject::tr("quantite"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("date limite"));
-        model->setHeaderData(3, Qt::Horizontal, QObject::tr("prix"));
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifain"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Quantite"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date limite"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Prix"));
         return model;
 }
 QSqlQueryModel *MEDICAMENT::afficher_prix()
 {
   QSqlQueryModel *model=new QSqlQueryModel();
         model->setQuery("SELECT * FROM MEDICAMENT ORDER BY prix");
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifain"));
-        model->setHeaderData(1, Qt::Horizontal, QObject::tr("quantite"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("date limite"));
-        model->setHeaderData(3, Qt::Horizontal, QObject::tr("prix"));
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifain"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Quantite"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date limite"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("Prix"));
         return model;
 }
-/*bool MEDICAMENT::modifier(int id)
+QSqlQueryModel* MEDICAMENT::recherche_faible()
+{
+  QSqlQueryModel* model=new QSqlQueryModel();
+QSqlQuery query;
+
+ model->setQuery("SELECT * FROM MEDICAMENT WHERE (prix BETWEEN '0' AND '15')");
+
+   model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifain"));
+   model->setHeaderData(1, Qt::Horizontal, QObject::tr("Quantite"));
+   model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date limite"));
+   model->setHeaderData(3, Qt::Horizontal, QObject::tr("Prix_Faible"));
+
+query.exec();
+  return  model;
+
+
+
+
+}
+QSqlQueryModel* MEDICAMENT::recherche_moye()
+{
+  QSqlQueryModel* model=new QSqlQueryModel();
+QSqlQuery query;
+
+ model->setQuery("SELECT * FROM MEDICAMENT WHERE (prix BETWEEN '15' AND '35')");
+
+   model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifain"));
+   model->setHeaderData(1, Qt::Horizontal, QObject::tr("Quantite"));
+   model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date limite"));
+   model->setHeaderData(3, Qt::Horizontal, QObject::tr("Prix_moyenne"));
+
+query.exec();
+  return  model;
+
+
+
+
+}
+
+QSqlQueryModel* MEDICAMENT::recherche_chere()
+{
+  QSqlQueryModel* model=new QSqlQueryModel();
+QSqlQuery query;
+
+ model->setQuery("SELECT * FROM MEDICAMENT WHERE (prix BETWEEN '35' AND '99999')");
+
+ model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifain"));
+ model->setHeaderData(1, Qt::Horizontal, QObject::tr("Quantite"));
+ model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date limite"));
+ model->setHeaderData(3, Qt::Horizontal, QObject::tr("Prix_chere"));
+
+query.exec();
+  return  model;
+
+
+
+
+}
+bool MEDICAMENT::modifier(int id,QString date)
 {
 
 QSqlQuery query;
 
 QString id_string=QString::number(id);
-QString quantite_string=QString::number(quantite);
-QString prix_string=QString::number(prix);
+QString a=QString::number(quantite);
+QString b=QString::number(prix);
 
-query.prepare("UPDATE MEDICAMENT SET QUANTITE=00000,dat='2121',prix=000000 WHERE id=2;");
+query.prepare("UPDATE MEDICAMENT SET quantite=:forename,prix=:surname,dat=:date WHERE id=:id;");
 
 query.bindValue(":id",id);
-
-query.bindValue(":quantite",quantite_string);
-query.bindValue(":prix", prix_string);
-query.bindValue(":date", date);
+     query.bindValue(":forename",a);
+     query.bindValue(":surname",b);
+     query.bindValue(":date", date /*date_string*/);
 return    query.exec();
 }
-*/
+QSqlQueryModel* MEDICAMENT::recherche(int id)
+{
+  QSqlQueryModel* model=new QSqlQueryModel();
+QSqlQuery query;
+
+    QString id_string=QString::number(id);
+    query.bindValue(":id",id_string);
+
+model->setQuery("SELECT * FROM MEDICAMENT WHERE id=:id;");
+
+ model->setHeaderData(0, Qt::Horizontal, QObject::tr("Identifain"));
+ model->setHeaderData(1, Qt::Horizontal, QObject::tr("Quantite"));
+ model->setHeaderData(2, Qt::Horizontal, QObject::tr("Date limite"));
+ model->setHeaderData(3, Qt::Horizontal, QObject::tr("Prix_chere"));
+
+query.exec();
+  return  model;
+
+
+
+
+}

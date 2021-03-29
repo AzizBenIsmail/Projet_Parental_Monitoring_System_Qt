@@ -27,8 +27,11 @@ public:
     bool reset();
     QSqlQueryModel* afficher_qt();
     QSqlQueryModel* afficher_prix();
-    //bool modifier(int,QString);
-
+    bool modifier(int,QString);
+     QSqlQueryModel* recherche_faible();
+      QSqlQueryModel* recherche_moye();
+      QSqlQueryModel* recherche(int);
+       QSqlQueryModel* recherche_chere();
 private:
     double id,prix,quantite;
     QString date;

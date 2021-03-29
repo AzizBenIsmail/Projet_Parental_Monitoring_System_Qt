@@ -558,7 +558,7 @@
        </font>
       </property>
       <property name="text">
-       <string>id</string>
+       <string>id :</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_9">
@@ -578,15 +578,15 @@
        </font>
       </property>
       <property name="text">
-       <string>Prix</string>
+       <string>Prix :</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>80</y>
-        <width>71</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -598,7 +598,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Qunatite</string>
+       <string>Qunatite :</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="_id_m">
@@ -648,7 +648,7 @@
        </font>
       </property>
       <property name="text">
-       <string>date</string>
+       <string>date :</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_ajout_m">
@@ -877,12 +877,65 @@
       </property>
      </widget>
     </widget>
+    <widget class="QGroupBox" name="groupBox_10">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>70</y>
+       <width>351</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Prix</string>
+     </property>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Faible</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Moyenne">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>50</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Moyenne</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_chere">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>50</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>chère</string>
+      </property>
+     </widget>
+    </widget>
     <zorder>label_ph_2</zorder>
     <zorder>groupBox_3</zorder>
     <zorder>groupBox_6</zorder>
     <zorder>groupBox_4</zorder>
     <zorder>groupBox_9</zorder>
     <zorder>groupBox_16</zorder>
+    <zorder>groupBox_10</zorder>
    </widget>
   </widget>
   <zorder>label_ph</zorder>

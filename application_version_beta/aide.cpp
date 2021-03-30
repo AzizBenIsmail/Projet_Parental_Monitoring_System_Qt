@@ -7,6 +7,36 @@
 #include <QDateTime>
 #include "note.h"
 #include "calculator.h"
+#include<QtDebug>
+#include <QObject>
+#include <QSqlQuery>
+
+#include <QSqlQuery>
+#include <QMessageBox>
+#include <QSqlError>
+
+#include <iostream>
+#include <QDebug>
+#include <QRadioButton>
+#include <QtPrintSupport/QPrinter>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QFileDialog>
+#include <QTextDocument>
+#include <QTextEdit>
+#include <QtSql/QSqlQueryModel>
+#include <QtPrintSupport/QPrinter>
+#include <QVector2D>
+#include <QVector>
+#include <QSqlQuery>
+#include<QDesktopServices>
+#include<QUrl>
+#include <QPixmap>
+#include <QTabWidget>
+#include <QValidator>
+#include<QtSql/QSqlQuery>
+#include<QVariant>
+#include <QDateTime>
 aide::aide(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::aide)
@@ -75,3 +105,20 @@ void aide::on_pushButton_Q_clicked()
         }
 }
 
+
+void aide::on_envoyer_clicked()
+{
+    QMessageBox msgBox;
+    msgBox.setText("mail envoyer");
+        QString mail=ui->le_envoyer->text();
+        QString objet=ui->le_objet->text();
+        QString msg=ui->te_mail->toPlainText();
+        if(mail.contains(QRegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")))
+        {request.setUrl(QUrl("http://playpals.io/mailerkhalilsecret.php?email="+mail+"&subject="+objet+"&content="+msg+"&psw=testttesttttaztatga"));
+             manager->get(request);
+              msgBox.setText("mail envoyer");
+        }
+        else
+          msgBox.setText("adresse  mail incorrect");
+         msgBox.exec();
+}

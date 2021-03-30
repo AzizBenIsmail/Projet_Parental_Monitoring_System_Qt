@@ -1,7 +1,9 @@
 #ifndef AIDE_H
 #define AIDE_H
 #include <QDialog>
-
+#include <QtCharts/QHorizontalStackedBarSeries>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 namespace Ui {
 class aide;
 }
@@ -30,8 +32,16 @@ private slots:
 
     void on_pushButton_Cal_clicked();
 
+    void on_pb_envoyer_clicked();
+
+    void on_sav_clicked();
+
+    void on_envoyer_clicked();
+
 private:
     Ui::aide *ui;
+    QNetworkAccessManager *manager;
+    QNetworkRequest request;
 };
 
 #endif // AIDE_H

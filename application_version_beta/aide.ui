@@ -48,6 +48,13 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+   </property>
    <property name="text">
     <string>Retour au menu</string>
    </property>
@@ -60,6 +67,13 @@
      <width>81</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
    </property>
    <property name="text">
     <string>Quitter</string>
@@ -124,6 +138,13 @@
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+   </property>
    <property name="text">
     <string>Note</string>
    </property>
@@ -136,6 +157,13 @@
      <width>181</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
    </property>
    <property name="text">
     <string>Calculatrise</string>
@@ -189,7 +217,11 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
     </property>
     <property name="text">
      <string>Envoyer</string>

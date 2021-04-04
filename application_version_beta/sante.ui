@@ -35,6 +35,13 @@
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+   </property>
    <property name="text">
     <string>retour au menu</string>
    </property>
@@ -61,6 +68,13 @@
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+   </property>
    <property name="text">
     <string>Quitter</string>
    </property>
@@ -74,11 +88,14 @@
      <height>601</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="tabShape">
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <property name="documentMode">
     <bool>false</bool>
@@ -99,8 +116,8 @@
     <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>30</y>
+       <x>10</x>
+       <y>20</y>
        <width>331</width>
        <height>331</height>
       </rect>
@@ -111,9 +128,9 @@
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>0</x>
         <y>40</y>
-        <width>47</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -125,7 +142,7 @@
        </font>
       </property>
       <property name="text">
-       <string>id</string>
+       <string>id Ajout</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_3">
@@ -166,16 +183,6 @@
       </property>
       <property name="text">
        <string>taille</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="_id">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>40</y>
-        <width>113</width>
-        <height>21</height>
-       </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="_poid">
@@ -264,6 +271,13 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Ajouter</string>
       </property>
@@ -287,6 +301,13 @@
         <strikeout>false</strikeout>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Modifier</string>
       </property>
@@ -298,6 +319,46 @@
         <y>250</y>
         <width>194</width>
         <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="_id_ajouter">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>40</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>id Modify :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="id_modify">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>40</y>
+        <width>41</width>
+        <height>20</height>
        </rect>
       </property>
      </widget>
@@ -346,6 +407,13 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Suprime</string>
       </property>
@@ -391,7 +459,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>450</y>
+       <y>500</y>
        <width>341</width>
        <height>61</height>
       </rect>
@@ -419,7 +487,11 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>ID</string>
@@ -435,7 +507,11 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Taille</string>
@@ -451,7 +527,11 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Poid</string>
@@ -461,7 +541,7 @@
     <widget class="QGroupBox" name="groupBox_7">
      <property name="geometry">
       <rect>
-       <x>530</x>
+       <x>390</x>
        <y>480</y>
        <width>171</width>
        <height>81</height>
@@ -486,6 +566,13 @@
         <bold>false</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Reset</string>
       </property>
@@ -494,8 +581,8 @@
     <widget class="QGroupBox" name="groupBox_8">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>480</y>
+       <x>130</x>
+       <y>380</y>
        <width>120</width>
        <height>80</height>
       </rect>
@@ -512,10 +599,95 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>test</string>
       </property>
      </widget>
+    </widget>
+    <widget class="QLineEdit" name="Psearch_5">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>100</y>
+       <width>281</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_Actualise">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>490</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Actualise</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_enregistre">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>530</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+     </property>
+     <property name="text">
+      <string>PDF</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_81">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>100</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rechercher:</string>
+     </property>
     </widget>
     <zorder>label_ph3</zorder>
     <zorder>groupBox_2</zorder>
@@ -524,6 +696,10 @@
     <zorder>groupBox_15</zorder>
     <zorder>groupBox_7</zorder>
     <zorder>groupBox_8</zorder>
+    <zorder>Psearch_5</zorder>
+    <zorder>pushButton_Actualise</zorder>
+    <zorder>pushButton_enregistre</zorder>
+    <zorder>label_81</zorder>
    </widget>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -533,7 +709,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>30</y>
+       <y>50</y>
        <width>311</width>
        <height>261</height>
       </rect>
@@ -668,6 +844,13 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Ajouter</string>
       </property>
@@ -680,6 +863,13 @@
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Modifier</string>
@@ -771,6 +961,13 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Suprime</string>
       </property>
@@ -792,7 +989,7 @@
     <widget class="QGroupBox" name="groupBox_9">
      <property name="geometry">
       <rect>
-       <x>500</x>
+       <x>420</x>
        <y>490</y>
        <width>171</width>
        <height>81</height>
@@ -816,6 +1013,16 @@
         <weight>50</weight>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Reset</string>
@@ -854,7 +1061,11 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Prix</string>
@@ -869,8 +1080,15 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Quantite</string>
@@ -898,6 +1116,13 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Faible</string>
       </property>
@@ -910,6 +1135,13 @@
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Moyenne</string>
@@ -924,10 +1156,37 @@
         <height>23</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>chère</string>
       </property>
      </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_Actualise_m">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>500</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Actualise</string>
+     </property>
     </widget>
     <zorder>label_ph_2</zorder>
     <zorder>groupBox_3</zorder>
@@ -936,6 +1195,7 @@
     <zorder>groupBox_9</zorder>
     <zorder>groupBox_16</zorder>
     <zorder>groupBox_10</zorder>
+    <zorder>pushButton_Actualise_m</zorder>
    </widget>
   </widget>
   <zorder>label_ph</zorder>

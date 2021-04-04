@@ -2,6 +2,9 @@
 #include<QtDebug>
 #include <QObject>
 #include <QSqlQuery>
+#include <QPrintDialog>
+#include <QtPrintSupport/QPrinter>
+
 suivi::suivi()
 {
     id=0;
@@ -158,10 +161,10 @@ QSqlQueryModel*  suivi::test()
 {
   QSqlQueryModel *model=new QSqlQueryModel();
         model->setQuery("SELECT * FROM suivi WHERE  ( tension!=12)");
-        model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifain"));
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifain problem"));
         model->setHeaderData(1, Qt::Horizontal, QObject::tr("taille"));
         model->setHeaderData(2, Qt::Horizontal, QObject::tr("poid"));
-        model->setHeaderData(3, Qt::Horizontal, QObject::tr("tension"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("problem de tension"));
         model->setHeaderData(4, Qt::Horizontal, QObject::tr("date"));
         return model;
 }

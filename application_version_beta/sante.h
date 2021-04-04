@@ -68,6 +68,24 @@ private slots:
 
     void on_pushButton_Recherche_clicked();
 
+    void on_pushButton_Actualise_2_clicked();
+
+    void on_pushButton_Actualise_m_clicked();
+
+    void on_pushButton_Actualise_clicked();
+
+    void on_pushButton_enregistre_clicked();
+
+    void on_Psearch_5_textChanged(const QString &arg1);
+
+    void on_lineEdit_idS_textChanged(const QString &arg1);
+
+    void on__id_textChanged(const QString &arg1);
+
+    void on_id_textChanged(const QString &arg1);
+
+    void on_id_modify_textChanged(const QString &arg1);
+
 private:
     Ui::Sante *ui;
     suivi e;

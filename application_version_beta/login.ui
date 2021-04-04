@@ -130,6 +130,13 @@
          <bold>true</bold>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+       </property>
        <property name="text">
         <string>Valider</string>
        </property>
@@ -142,6 +149,13 @@
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
        </property>
        <property name="text">
         <string>Quitter</string>

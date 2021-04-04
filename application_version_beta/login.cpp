@@ -67,7 +67,7 @@ if((l.GetLogin()=="")&&(l.GetPassword()==""))
 {
     QMessageBox::warning(this, "yo yo ", "il faux saisie login & Password");
 }else
-if((l.GetLogin()=="Admin@esprit.tn")&&(l.GetPassword()=="Admin"))
+if((l.GetLogin()=="Admin")&&(l.GetPassword()=="Admin"))
 {
     hide();
     Menu m;

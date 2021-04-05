@@ -16,6 +16,81 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QPixmap pix("C:/Users/asus/Desktop/projet_animal/123.jpg");
+        int w=ui->label_p->width();
+        int h=ui->label_p->height();
+               ui->label_p->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+        QPixmap pix1("C:/Users/asus/Desktop/projet_animal/123.jpg");
+            int w1=ui->label_p_3->width();
+            int h1=ui->label_p_3->height();
+        ui->label_p_3->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));
+    ui->lineEdit_id->setPlaceholderText("Put ID");
+    ui->lineEdit_age->setPlaceholderText("Put age");
+    ui->lineEdit_prix->setPlaceholderText("Put Prix");
+    ui->lineEdit_nom->setPlaceholderText("Put nom");
+    ui->lineEdit_race->setPlaceholderText("Put race");
+    ui->lineEdit_sexe->setPlaceholderText("Put sex");
+    ui->txt_recherche_animal->setPlaceholderText("Put critère");
+    ui->lineEdit_id_Fiche_animal->setPlaceholderText("Put ID");
+    ui->lineEdit_poid_fiche->setPlaceholderText("Put poids");
+    ui->lineEdit_taille_fiche->setPlaceholderText("Put taille");
+    ui->lineEdit_nbr_fiche->setPlaceholderText("Put nombre_fiche ");
+    ui->lineEdit_id_animal_fiche->setPlaceholderText("Put ID");
+    ui->etat_text->setPlaceholderText("Put etat");
+    ui->nom_maladie->setPlaceholderText("Put maladie");
+    ui->lineEdit_id_Fiche_animal->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_poid_fiche->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_nbr_fiche->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_id_animal_fiche->setStyleSheet("QLineEdit { color: grey;}");
+    ui->etat_text->setStyleSheet("QLineEdit { color: grey;}");
+    ui->nom_maladie->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_taille_fiche->setStyleSheet("QLineEdit { color: grey;}");
+
+    ui->lineEdit_id->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_age->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_prix->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_nom->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_race->setStyleSheet("QLineEdit { color: grey;}");
+    ui->lineEdit_sexe->setStyleSheet("QLineEdit { color: grey;}");
+    ui->txt_recherche_animal->setStyleSheet("QLineEdit { color: grey;}");
+    ui->label_id->setStyleSheet ("Font : 12pt");
+    ui->label_id->setStyleSheet ("Font : bold");
+    ui->label_age->setStyleSheet ("Font : 12pt");
+    ui->label_age->setStyleSheet ("Font : bold");
+    ui->label_prix->setStyleSheet ("Font : 12pt");
+    ui->label_prix->setStyleSheet ("Font : bold");
+    ui->label_nom->setStyleSheet ("Font : 12pt");
+    ui->label_nom->setStyleSheet ("Font : bold");
+    ui->label_race->setStyleSheet ("Font : 12pt");
+    ui->label_race->setStyleSheet ("Font : bold");
+    ui->label_sexe->setStyleSheet ("Font : 12pt");
+    ui->label_sexe->setStyleSheet ("Font : bold");
+    ui->label_animal->setStyleSheet ("Font : 12pt");
+    ui->label_animal->setStyleSheet ("Font : bold");
+    ui->label_date->setStyleSheet ("Font : 12pt");
+    ui->label_date->setStyleSheet ("Font : bold");
+    ui->label_3->setStyleSheet ("Font : 12pt");
+    ui->label_3->setStyleSheet ("Font : bold");
+    ui->label_critere->setStyleSheet ("Font : 12pt");
+    ui->label_critere->setStyleSheet ("Font : bold");
+
+    ui->label_id_2->setStyleSheet ("Font : 12pt");
+    ui->label_id_2->setStyleSheet ("Font : bold");
+    ui->label_4->setStyleSheet ("Font : 12pt");
+    ui->label_4->setStyleSheet ("Font : bold");
+    ui->label_prix_2->setStyleSheet ("Font : 12pt");
+    ui->label_prix_2->setStyleSheet ("Font : bold");
+    ui->label_nom_2->setStyleSheet ("Font : 12pt");
+    ui->label_nom_2->setStyleSheet ("Font : bold");
+    ui->label_nom_3->setStyleSheet ("Font : 12pt");
+    ui->label_nom_3->setStyleSheet ("Font : bold");
+    ui->label_nom_4->setStyleSheet ("Font : 12pt");
+    ui->label_nom_4->setStyleSheet ("Font : bold");
+    ui->label_6->setStyleSheet ("Font : 12pt");
+    ui->label_6->setStyleSheet ("Font : bold");
+    ui->label_7->setStyleSheet ("Font : 12pt");
+    ui->label_7->setStyleSheet ("Font : bold");
+
 }
 
 MainWindow::~MainWindow()

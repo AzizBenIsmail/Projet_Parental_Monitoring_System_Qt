@@ -4,6 +4,18 @@
 #include <QtCharts/QHorizontalStackedBarSeries>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include <QDialog>
+#include <QMediaPlayer>
+#include <QListWidgetItem>
+
+#include<QtCharts>
+#include<QChartView>
+#include<QLineSeries>
+#include <QDate>
+#include <QtCharts/QHorizontalStackedBarSeries>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+
 namespace Ui {
 class aide;
 }

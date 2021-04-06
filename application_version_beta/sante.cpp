@@ -383,7 +383,7 @@ void Sante::on_Tri_Taille_2_clicked()
 }
 void Sante::on_pushm_clicked()
 {
-    int id=ui->_id_m->text().toInt();
+    int id=ui->_id_m_2->text().toInt();
         double Quantite=ui->_Quantite->text().toDouble();
         double Prix=ui->Prix->text().toDouble();
         QString date=ui->_date_m->text();
@@ -534,7 +534,7 @@ void Sante::on_Psearch_5_textChanged(const QString &arg1)
 {
     QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery   *query= new QSqlQuery();
-    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or tension LIKE'"+arg1+"%' ");
+    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or dat LIKE'"+arg1+"%' ");
      query->exec();
      if (query->next()) {
      model->setQuery(*query);
@@ -549,7 +549,6 @@ void Sante::on_Psearch_5_textChanged(const QString &arg1)
 
 void Sante::on_id_textChanged(const QString &arg1)
 {
-    QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery   *query= new QSqlQuery();
     query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or tension LIKE'"+arg1+"%' ");
      query->exec();
@@ -563,28 +562,111 @@ void Sante::on_id_textChanged(const QString &arg1)
 
 void Sante::on_id_modify_textChanged(const QString &arg1)
 {
-    QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery   *query= new QSqlQuery();
-    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or tension LIKE'"+arg1+"%' ");
+    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%'");
      query->exec();
      if (query->next()) { }
      else {
          QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
                          QObject::tr("NO MATCH FOUND !.\n"
                                      "Click Cancel to exit."), QMessageBox::Cancel);
-         ui->Psearch_5->clear();}
+         ui->id_modify->clear();}
 }
 
 void Sante::on_lineEdit_idS_textChanged(const QString &arg1)
 {
-    QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery   *query= new QSqlQuery();
-    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or tension LIKE'"+arg1+"%' ");
+    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%'");
      query->exec();
      if (query->next()) { }
      else {
          QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
                          QObject::tr("NO MATCH FOUND !.\n"
                                      "Click Cancel to exit."), QMessageBox::Cancel);
-         ui->Psearch_5->clear();}
+         ui->lineEdit_idS->clear();}
+}
+
+void Sante::on__id_m_2_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM MEDICAMENT WHERE ID  LIKE'"+arg1+"%'");
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         ui->_id_m_2->clear();}
+}
+
+void Sante::on_lineEdit_idS_m_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM MEDICAMENT WHERE ID  LIKE'"+arg1+"%'");
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         ui->lineEdit_idS_m->clear();}
+}
+
+void Sante::on_pushButton_6_clicked()
+{
+    ui->tableView_aff->setModel(e.afficher_poidsideal());
+
+}
+
+void Sante::on_pushButton_im_clicked()
+{
+
+        QString strStream;
+                QTextStream out(&strStream);
+
+
+
+                const int rowCount = ui->tableView_aff->model()->rowCount();
+                const int columnCount = ui->tableView_aff->model()->columnCount();
+
+                out <<  "<html>\n"
+                    "<head>\n"
+
+                    "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                    <<  QString("<title>%60 les postes</title>\n").arg("poste")
+                    <<  "</head>\n"
+                    "<body bgcolor=#ffffff link=#5000A0>\n"
+                    "<table border=1 cellspacing=0 cellpadding=2>\n";
+                out << "<thead><tr bgcolor=#f0f0f0>";
+                for (int column = 0; column < columnCount; column++)
+                    if (! ui->tableView_aff->isColumnHidden(column))
+                        out << QString("<th>%1</th>").arg(ui->tableView_aff->model()->headerData(column, Qt::Horizontal).toString());
+                out << "</tr></thead>\n";
+
+                for (int row = 0; row < rowCount; row++) {
+                    out << "<tr>";
+                    for (int column = 0; column < columnCount; column++) {
+                        if (!ui->tableView_aff->isColumnHidden(column)) {
+                            QString data = ui->tableView_aff->model()->data(ui->tableView_aff->model()->index(row, column)).toString().simplified();
+                            out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                        }
+                    }
+                    out << "</tr>\n";
+                }
+                out <<  "</table>\n"
+                    "</body>\n"
+                    "</html>\n";
+
+                QTextDocument *document = new QTextDocument();
+                document->setHtml(strStream);
+
+                QPrinter printer;
+
+                QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+                if (dialog->exec() == QDialog::Accepted) {
+                    document->print(&printer);
+                }
+
+                delete document;
+
 }

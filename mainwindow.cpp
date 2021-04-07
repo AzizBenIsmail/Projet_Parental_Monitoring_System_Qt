@@ -27,9 +27,10 @@ QPixmap pix("C:/Users/LENOVO/OneDrive/Documents/prestataire_service/5.png");
    int w=ui->label_pic->width();
    int h=ui->label_pic->height();
    ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
-   int a=ui->label_19->width();
-       int b=ui->label_19->height();
-       ui->label_19->setPixmap(pix.scaled(a,b,Qt::KeepAspectRatio));
+   int a=ui->label_pic_2->width();
+       int b=ui->label_pic_2->height();
+       ui->label_pic_2->setPixmap(pix.scaled(a,b,Qt::KeepAspectRatio));
+       ui->idpres->setPlaceholderText("put ID");
 }
 MainWindow::~MainWindow()
 {
@@ -52,10 +53,80 @@ void MainWindow::on_pushButton_2_clicked()
         QString adressepres=ui->adressepres->text();
         QString sexepres=ui->sexepres->text();
          //prestataire P;
+        if (idpres <= 0 )
+                   {
+                       QMessageBox::critical(nullptr, QObject::tr("problem id"),
+                                   QObject::tr("verifier id\n"
+                                               "Click Cancel to exit."), QMessageBox::Cancel);
+
+                   }
+                   else if (nompres <= 0 )
+                   {
+                       QMessageBox::critical(nullptr, QObject::tr("problem nompres"),
+                                   QObject::tr("verifier nompres\n"
+                                               "Click Cancel to exit."), QMessageBox::Cancel);
+
+                   }
+        else if (prenompres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem prenompres"),
+                        QObject::tr("verifier prenompres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (salairepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem salairepres"),
+                        QObject::tr("verifier salairepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (specialitepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem specialitepres"),
+                        QObject::tr("verifier specialitepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (dateembauchepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem dateembauchepres"),
+                        QObject::tr("verifier dateembauchepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (nbr_heurespres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem nbr_heurespres"),
+                        QObject::tr("verifier nbr_heurespres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (telpres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem telpres"),
+                        QObject::tr("verifier telpres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (adressepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem adressepres"),
+                        QObject::tr("verifier adressepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (sexepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem sexepres"),
+                        QObject::tr("verifier sexepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
        prestataire P(idpres,nompres,prenompres,salairepres,specialitepres,dateembauchepres,nbr_heurespres,telpres,adressepres,sexepres);
        
         bool test=P.Ajouter_pres();
-      if(test)
+             if(test)
        {    QMessageBox::information(nullptr, QObject::tr("ajout avec succes"),
                                      QObject::tr("ajout successful.\n"
                                                  "Click Cancel to exit."), QMessageBox::Cancel);
@@ -68,6 +139,7 @@ void MainWindow::on_pushButton_2_clicked()
                                                  "Click Cancel to exit."), QMessageBox::Cancel);
 
     }
+
 
 
 void MainWindow::on_pushButton_3_clicked()
@@ -105,7 +177,76 @@ void MainWindow::on_pushButton_clicked()
         int telpres=ui->telpres->text().toInt();
         QString adressepres=ui->adressepres->text();
         QString sexepres=ui->sexepres->text();
-         //prestataire P;
+        if (idpres <= 0 )
+                   {
+                       QMessageBox::critical(nullptr, QObject::tr("problem id"),
+                                   QObject::tr("verifier id\n"
+                                               "Click Cancel to exit."), QMessageBox::Cancel);
+
+                   }
+                   else if (nompres <= 0 )
+                   {
+                       QMessageBox::critical(nullptr, QObject::tr("problem nompres"),
+                                   QObject::tr("verifier nompres\n"
+                                               "Click Cancel to exit."), QMessageBox::Cancel);
+
+                   }
+        else if (prenompres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem prenompres"),
+                        QObject::tr("verifier prenompres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (salairepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem salairepres"),
+                        QObject::tr("verifier salairepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (specialitepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem specialitepres"),
+                        QObject::tr("verifier specialitepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (dateembauchepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem dateembauchepres"),
+                        QObject::tr("verifier dateembauchepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (nbr_heurespres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem nbr_heurespres"),
+                        QObject::tr("verifier nbr_heurespres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (telpres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem telpres"),
+                        QObject::tr("verifier telpres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (adressepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem adressepres"),
+                        QObject::tr("verifier adressepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (sexepres <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem sexepres"),
+                        QObject::tr("verifier sexepres\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
        prestataire P(idpres,nompres,prenompres,salairepres,specialitepres,dateembauchepres,nbr_heurespres,telpres,adressepres,sexepres);
 
         bool test=P.modifier_pres(idpres);
@@ -144,6 +285,41 @@ void MainWindow::on_pushButton_5_clicked()
         QString etat_psycologique=ui->etat_psycologique->text();
         QString talent=ui->talent->text();
         QString sexe=ui->sexe->text();
+        if (id <= 0 )
+                   {
+                       QMessageBox::critical(nullptr, QObject::tr("problem id"),
+                                   QObject::tr("verifier id\n"
+                                               "Click Cancel to exit."), QMessageBox::Cancel);
+
+                   }
+                   else if (nom_prenom <= 0 )
+                   {
+                       QMessageBox::critical(nullptr, QObject::tr("problem nom_prenom"),
+                                   QObject::tr("verifier nom_prenom\n"
+                                               "Click Cancel to exit."), QMessageBox::Cancel);
+
+                   }
+        else if (etat_psycologique <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem etat_psycologique"),
+                        QObject::tr("verifier etat_psycologique\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (talent <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem talent"),
+                        QObject::tr("verifier talent\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else if (sexe <= 0 )
+        {
+            QMessageBox::critical(nullptr, QObject::tr("problem sexe"),
+                        QObject::tr("verifier sexe\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
          enfant E(id,nom_prenom,etat_psycologique,talent,sexe);
         bool test=E.Ajouter();
       if(test)
@@ -169,6 +345,43 @@ void MainWindow::on_pushButton_6_clicked()
            QString etat_psycologique=ui->etat_psycologique->text();
            QString talent=ui->talent->text();
            QString sexe=ui->sexe->text();
+
+           if (id <= 0 )
+                      {
+                          QMessageBox::critical(nullptr, QObject::tr("problem id"),
+                                      QObject::tr("verifier id\n"
+                                                  "Click Cancel to exit."), QMessageBox::Cancel);
+
+                      }
+                      else if (nom_prenom <= 0 )
+                      {
+                          QMessageBox::critical(nullptr, QObject::tr("problem nom_prenom"),
+                                      QObject::tr("verifier nom_prenom\n"
+                                                  "Click Cancel to exit."), QMessageBox::Cancel);
+
+                      }
+           else if (etat_psycologique <= 0 )
+           {
+               QMessageBox::critical(nullptr, QObject::tr("problem etat_psycologique"),
+                           QObject::tr("verifier etat_psycologique\n"
+                                       "Click Cancel to exit."), QMessageBox::Cancel);
+
+           }
+           else if (talent <= 0 )
+           {
+               QMessageBox::critical(nullptr, QObject::tr("problem talent"),
+                           QObject::tr("verifier talent\n"
+                                       "Click Cancel to exit."), QMessageBox::Cancel);
+
+           }
+           else if (sexe <= 0 )
+           {
+               QMessageBox::critical(nullptr, QObject::tr("problem sexe"),
+                           QObject::tr("verifier sexe\n"
+                                       "Click Cancel to exit."), QMessageBox::Cancel);
+
+           }
+
             enfant E(id,nom_prenom,etat_psycologique,talent,sexe);
            bool test=E.modifier(id);
         if(test)
@@ -219,7 +432,7 @@ void MainWindow::on_pushButton_7_clicked()
     QSqlQueryModel model;
        model.setQuery("SELECT * FROM enfant");
 
-        QString html = "<table  border='2'> <thead> <tr> <th>#</th> <th>nom_prenom</th> <th>etat_psycologique</th> <th>talent</th> <th> sexe</th> <th> id</th> <th> Etat</th><th> Nom Maladie </th>  </tr> </thead><tbody > ";
+        QString html = "<table  border='1'> <thead> <tr> <th>+</th> <th>nom_prenom</th> <th>etat_psycologique</th> <th>talent</th> <th> sexe</th> <th> id</th> <th> Etat</th><th> Nom Maladie </th>  </tr> </thead><tbody > ";
 
 
        for (int i = 0; i < model.rowCount(); ++i) {
@@ -236,7 +449,10 @@ void MainWindow::on_pushButton_7_clicked()
                                 QString sexe = model.record(i).value("sexe").toString();
 
            QString name = model.record(i).value("nom_prenom").toString();
-html += "<tr > <td>"+id+"</td> <td>"+nom_prenom+"</td> <td>"+etat_psycologique+"</td><td>"+talent+"</td><td>"+sexe+"</td></tr>";
+html += "<tr > <td>"+id+"</td> <td><h2>"+nom_prenom+"</h2></td> <td><h2>"+etat_psycologique+"</h2></td><td><h2>"+talent+"</h2></td><td><h2>"+sexe+"</h2></td></tr>";
+
+
+
        }
     html+="</tbody></table>";
 

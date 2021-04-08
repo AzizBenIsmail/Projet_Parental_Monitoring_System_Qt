@@ -26,6 +26,7 @@ public:
     QSqlQueryModel* afficher_id();
     QSqlQueryModel* afficher_poid();
     QSqlQueryModel* afficher_taille();
+    QSqlQueryModel* afficher_poidsideal();
 
     bool Supprime(int);
     bool modifier(int,QString);

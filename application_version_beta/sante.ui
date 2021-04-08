@@ -581,7 +581,7 @@
     <widget class="QGroupBox" name="groupBox_8">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>40</x>
        <y>380</y>
        <width>120</width>
        <height>80</height>
@@ -689,6 +689,66 @@
       <string>Rechercher:</string>
      </property>
     </widget>
+    <widget class="QGroupBox" name="groupBox_11">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>380</y>
+       <width>120</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>poids idéal</string>
+     </property>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Best</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_im">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>30</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Imprime</string>
+     </property>
+    </widget>
     <zorder>label_ph3</zorder>
     <zorder>groupBox_2</zorder>
     <zorder>groupBox</zorder>
@@ -700,6 +760,8 @@
     <zorder>pushButton_Actualise</zorder>
     <zorder>pushButton_enregistre</zorder>
     <zorder>label_81</zorder>
+    <zorder>groupBox_11</zorder>
+    <zorder>pushButton_im</zorder>
    </widget>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -717,26 +779,6 @@
      <property name="title">
       <string>Ajouter</string>
      </property>
-     <widget class="QLabel" name="label_8">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>47</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>11</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>id :</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
@@ -782,7 +824,7 @@
        <rect>
         <x>80</x>
         <y>40</y>
-        <width>113</width>
+        <width>41</width>
         <height>21</height>
        </rect>
       </property>
@@ -883,6 +925,56 @@
         <width>110</width>
         <height>22</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="_id_m_2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>40</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>id Ajout</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>40</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>id Modify :</string>
       </property>
      </widget>
     </widget>
@@ -1033,7 +1125,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>430</y>
+       <y>490</y>
        <width>341</width>
        <height>61</height>
       </rect>

@@ -86,6 +86,14 @@ private slots:
 
     void on_id_modify_textChanged(const QString &arg1);
 
+    void on__id_m_2_textChanged(const QString &arg1);
+
+    void on_lineEdit_idS_m_textChanged(const QString &arg1);
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_im_clicked();
+
 private:
     Ui::Sante *ui;
     suivi e;

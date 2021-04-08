@@ -15,6 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    activite.cpp \
     admin.cpp \
     aide.cpp \
     animal.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
     connection.cpp \
     contact.cpp \
     cuisine.cpp \
+    fourniture.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -34,6 +36,7 @@ SOURCES += \
     suivi.cpp
 
 HEADERS += \
+    activite.h \
     admin.h \
     aide.h \
     animal.h \
@@ -41,6 +44,7 @@ HEADERS += \
     connection.h \
     contact.h \
     cuisine.h \
+    fourniture.h \
     login.h \
     mainwindow.h \
     medicament.h \

@@ -113,9 +113,9 @@
     <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>30</y>
-       <width>331</width>
+       <width>371</width>
        <height>331</height>
       </rect>
      </property>
@@ -147,7 +147,7 @@
        <rect>
         <x>10</x>
         <y>130</y>
-        <width>61</width>
+        <width>121</width>
         <height>21</height>
        </rect>
       </property>
@@ -159,7 +159,7 @@
        </font>
       </property>
       <property name="text">
-       <string>poid</string>
+       <string>nom_Activite</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_4">
@@ -179,10 +179,10 @@
        </font>
       </property>
       <property name="text">
-       <string>taille</string>
+       <string>duree</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="_id">
+     <widget class="QLineEdit" name="id_ha">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -192,17 +192,17 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="_poid">
+     <widget class="QLineEdit" name="nom_Activite_ha">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>130</x>
         <y>130</y>
         <width>113</width>
         <height>20</height>
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="_taille">
+     <widget class="QLineEdit" name="duree_ha">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -212,7 +212,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="date">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -235,7 +235,7 @@
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>20</x>
         <y>190</y>
         <width>81</width>
         <height>21</height>
@@ -249,10 +249,10 @@
        </font>
       </property>
       <property name="text">
-       <string>tension</string>
+       <string>type</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="_tenstion">
+     <widget class="QLineEdit" name="type_ha">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -262,7 +262,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_ajout">
+     <widget class="QPushButton" name="pushButton_ajout_a">
       <property name="geometry">
        <rect>
         <x>200</x>
@@ -282,7 +282,7 @@
        <string>Ajouter</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="Modifier">
+     <widget class="QPushButton" name="Modifier_a">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -305,7 +305,7 @@
        <string>Modifier</string>
       </property>
      </widget>
-     <widget class="QDateTimeEdit" name="_date">
+     <widget class="QDateTimeEdit" name="date_ha">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -341,7 +341,7 @@
        <string>ID :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_idS">
+     <widget class="QLineEdit" name="lineEdit_idS_ha">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -351,7 +351,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_Sui">
+     <widget class="QPushButton" name="pushButton_Sui_ha">
       <property name="geometry">
        <rect>
         <x>100</x>
@@ -361,7 +361,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Suprime</string>
+       <string>Suprimer</string>
       </property>
      </widget>
     </widget>
@@ -377,7 +377,7 @@
      <property name="title">
       <string>Afficher</string>
      </property>
-     <widget class="QTableView" name="tableView_aff">
+     <widget class="QTableView" name="tableView_aff_ha">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -400,77 +400,6 @@
      <property name="text">
       <string/>
      </property>
-    </widget>
-    <widget class="QGroupBox" name="groupBox_15">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>450</y>
-       <width>341</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="title">
-      <string>TRI</string>
-     </property>
-     <widget class="QPushButton" name="Tri_IdE">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>91</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>ID</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Tri_Taille">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>20</y>
-        <width>81</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Taille</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Tri_Poid">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>20</y>
-        <width>81</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Poid</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QGroupBox" name="groupBox_7">
      <property name="geometry">
@@ -505,39 +434,11 @@
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="groupBox_8">
-     <property name="geometry">
-      <rect>
-       <x>370</x>
-       <y>480</y>
-       <width>120</width>
-       <height>80</height>
-      </rect>
-     </property>
-     <property name="title">
-      <string>problem de tension</string>
-     </property>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>test</string>
-      </property>
-     </widget>
-    </widget>
     <zorder>label_ph3</zorder>
     <zorder>groupBox_2</zorder>
     <zorder>groupBox</zorder>
     <zorder>groupBox_5</zorder>
-    <zorder>groupBox_15</zorder>
     <zorder>groupBox_7</zorder>
-    <zorder>groupBox_8</zorder>
    </widget>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -548,8 +449,8 @@
       <rect>
        <x>20</x>
        <y>30</y>
-       <width>311</width>
-       <height>261</height>
+       <width>341</width>
+       <height>321</height>
       </rect>
      </property>
      <property name="title">
@@ -595,7 +496,7 @@
        <string>Prix :</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_10">
+     <widget class="QLabel" name="Qunatite">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -615,7 +516,7 @@
        <string>Qunatite :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="_id_m">
+     <widget class="QLineEdit" name="_id_h">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -625,7 +526,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="Prix">
+     <widget class="QLineEdit" name="Qunatite_h">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -635,7 +536,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="_Quantite">
+     <widget class="QLineEdit" name="prix_hay">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -649,7 +550,7 @@
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>170</y>
+        <y>220</y>
         <width>47</width>
         <height>21</height>
        </rect>
@@ -668,8 +569,8 @@
      <widget class="QPushButton" name="pushButton_ajout_m">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>220</y>
+        <x>190</x>
+        <y>270</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -682,6 +583,13 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Ajouter</string>
       </property>
@@ -690,23 +598,90 @@
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>220</y>
+        <y>280</y>
         <width>75</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Modifier</string>
       </property>
      </widget>
-     <widget class="QDateEdit" name="_date_m">
+     <widget class="QDateEdit" name="_date_h">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>220</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>47</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ref</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ref_h">
       <property name="geometry">
        <rect>
         <x>80</x>
         <y>170</y>
-        <width>110</width>
-        <height>22</height>
+        <width>113</width>
+        <height>20</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="_id_h_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>40</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>40</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>id modi :</string>
       </property>
      </widget>
     </widget>
@@ -722,7 +697,7 @@
      <property name="title">
       <string>Afficher</string>
      </property>
-     <widget class="QTableView" name="tableView_aff_m">
+     <widget class="QTableView" name="tableView_aff_h">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -758,7 +733,7 @@
        <string>ID :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_idS_m">
+     <widget class="QLineEdit" name="lineEdit_idS_h">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -785,6 +760,13 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
       <property name="text">
        <string>Suprime</string>
       </property>
@@ -806,8 +788,8 @@
     <widget class="QGroupBox" name="groupBox_9">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>490</y>
+       <x>390</x>
+       <y>480</y>
        <width>171</width>
        <height>81</height>
       </rect>
@@ -830,6 +812,13 @@
         <weight>50</weight>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Reset</string>
@@ -868,10 +857,14 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
-       <string>Prix</string>
+       <string>id</string>
       </property>
      </widget>
      <widget class="QPushButton" name="Tri_Taille_2">
@@ -884,64 +877,94 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
       </property>
       <property name="text">
        <string>Quantite</string>
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="groupBox_10">
+    <widget class="QPushButton" name="pushButton_enregistre_p">
      <property name="geometry">
       <rect>
-       <x>600</x>
-       <y>70</y>
-       <width>351</width>
-       <height>80</height>
+       <x>590</x>
+       <y>530</y>
+       <width>75</width>
+       <height>23</height>
       </rect>
      </property>
-     <property name="title">
-      <string>Prix</string>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Faible</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_Moyenne">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>50</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Moyenne</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_chere">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>50</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>chère</string>
-      </property>
-     </widget>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+     </property>
+     <property name="text">
+      <string>PDF</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Psearch_4">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>80</y>
+       <width>281</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_81">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>80</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rechercher:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_Actualise_h">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>490</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Actualise</string>
+     </property>
     </widget>
     <zorder>label_ph_2</zorder>
     <zorder>groupBox_3</zorder>
@@ -949,7 +972,10 @@
     <zorder>groupBox_4</zorder>
     <zorder>groupBox_9</zorder>
     <zorder>groupBox_16</zorder>
-    <zorder>groupBox_10</zorder>
+    <zorder>pushButton_enregistre_p</zorder>
+    <zorder>Psearch_4</zorder>
+    <zorder>label_81</zorder>
+    <zorder>pushButton_Actualise_h</zorder>
    </widget>
   </widget>
   <zorder>label_a</zorder>

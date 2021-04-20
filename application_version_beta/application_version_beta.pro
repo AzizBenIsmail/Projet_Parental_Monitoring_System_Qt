@@ -19,6 +19,7 @@ SOURCES += \
     admin.cpp \
     aide.cpp \
     animal.cpp \
+    arduino.cpp \
     calculator.cpp \
     connection.cpp \
     contact.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
     admin.h \
     aide.h \
     animal.h \
+    arduino.h \
     calculator.h \
     connection.h \
     contact.h \

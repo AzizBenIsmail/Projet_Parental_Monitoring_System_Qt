@@ -486,7 +486,7 @@ void Sante::on_pushButton_enregistre_clicked()
         "<body bgcolor=#ffffff link=#5000A0>\n"
 
         //     "<align='right'> " << datefich << "</align>"
-        "<center> <H1>Liste Des Fournisseurs </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
+        "<center> <H1>Liste Des suivi </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
 
     // headers
     out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";

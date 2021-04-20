@@ -15,7 +15,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    S.cpp \
     admin.cpp \
     aide.cpp \
     animal.cpp \
@@ -32,10 +31,10 @@ SOURCES += \
     note.cpp \
     programme.cpp \
     sante.cpp \
+    securite.cpp \
     suivi.cpp
 
 HEADERS += \
-    S.h \
     admin.h \
     aide.h \
     animal.h \
@@ -51,10 +50,10 @@ HEADERS += \
     note.h \
     programme.h \
     sante.h \
+    securite.h \
     suivi.h
 
 FORMS += \
-    S.ui \
     aide.ui \
     animal.ui \
     calculator.ui \
@@ -65,7 +64,8 @@ FORMS += \
     menu.ui \
     note.ui \
     programme.ui \
-    sante.ui
+    sante.ui \
+    securite.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

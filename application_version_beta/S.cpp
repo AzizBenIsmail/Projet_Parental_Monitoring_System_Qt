@@ -1,4 +1,4 @@
-#include "securite.h"
+#include "s.h"
 #include "ui_securite.h"
 #include "menu.h"
 #include <QPixmap>

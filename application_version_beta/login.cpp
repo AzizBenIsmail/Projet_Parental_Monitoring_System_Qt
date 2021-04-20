@@ -7,7 +7,7 @@
 #include <QTimer>
 #include <QDateTime>
 #include <QDebug>
-#include "securite.h"
+#include "S.h"
 Login::Login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Login)

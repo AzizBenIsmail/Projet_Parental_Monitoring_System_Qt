@@ -95,7 +95,7 @@
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <property name="documentMode">
     <bool>false</bool>
@@ -981,10 +981,10 @@
     <widget class="QGroupBox" name="groupBox_6">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>170</y>
+       <x>410</x>
+       <y>200</y>
        <width>591</width>
-       <height>311</height>
+       <height>301</height>
       </rect>
      </property>
      <property name="title">
@@ -996,7 +996,7 @@
         <x>20</x>
         <y>20</y>
         <width>551</width>
-        <height>271</height>
+        <height>261</height>
        </rect>
       </property>
      </widget>
@@ -1005,9 +1005,9 @@
      <property name="geometry">
       <rect>
        <x>700</x>
-       <y>490</y>
+       <y>500</y>
        <width>261</width>
-       <height>81</height>
+       <height>71</height>
       </rect>
      </property>
      <property name="title">
@@ -1082,9 +1082,9 @@
      <property name="geometry">
       <rect>
        <x>420</x>
-       <y>490</y>
+       <y>500</y>
        <width>171</width>
-       <height>81</height>
+       <height>71</height>
       </rect>
      </property>
      <property name="title">
@@ -1125,7 +1125,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>490</y>
+       <y>500</y>
        <width>341</width>
        <height>61</height>
       </rect>
@@ -1190,8 +1190,8 @@
     <widget class="QGroupBox" name="groupBox_10">
      <property name="geometry">
       <rect>
-       <x>600</x>
-       <y>70</y>
+       <x>20</x>
+       <y>370</y>
        <width>351</width>
        <height>80</height>
       </rect>
@@ -1264,7 +1264,7 @@
      <property name="geometry">
       <rect>
        <x>610</x>
-       <y>500</y>
+       <y>520</y>
        <width>75</width>
        <height>23</height>
       </rect>
@@ -1280,6 +1280,107 @@
       <string>Actualise</string>
      </property>
     </widget>
+    <widget class="QGroupBox" name="groupBox_12">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>10</y>
+       <width>541</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="title">
+      <string>Envoyer un mail</string>
+     </property>
+     <widget class="QLineEdit" name="le_envoyer">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="envoyer">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>120</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Envoyer</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="te_mail">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>70</y>
+        <width>351</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_objet">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>20</y>
+        <width>351</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_47">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>30</y>
+        <width>47</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Objet</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_48">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>21</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>À</string>
+      </property>
+     </widget>
+    </widget>
     <zorder>label_ph_2</zorder>
     <zorder>groupBox_3</zorder>
     <zorder>groupBox_6</zorder>
@@ -1288,6 +1389,7 @@
     <zorder>groupBox_16</zorder>
     <zorder>groupBox_10</zorder>
     <zorder>pushButton_Actualise_m</zorder>
+    <zorder>groupBox_12</zorder>
    </widget>
   </widget>
   <zorder>label_ph</zorder>

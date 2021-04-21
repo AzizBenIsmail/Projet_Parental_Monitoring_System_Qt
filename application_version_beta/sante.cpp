@@ -40,6 +40,37 @@
 #include <QDateTime>
 #include <QPrinter>
 #include <QPrintDialog>
+
+
+#include <QSqlQuery>
+#include <QMessageBox>
+#include <QSqlError>
+#include <iostream>
+#include <QDebug>
+#include <QRadioButton>
+#include <QtPrintSupport/QPrinter>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QFileDialog>
+#include <QTextDocument>
+#include <QTextEdit>
+#include <QtSql/QSqlQueryModel>
+#include <QtPrintSupport/QPrinter>
+#include <QVector2D>
+#include <QVector>
+#include <QSqlQuery>
+#include<QDesktopServices>
+#include<QUrl>
+#include <QPixmap>
+#include <QTabWidget>
+#include <QValidator>
+#include <QPrintDialog>
+#include<QtSql/QSqlQuery>
+#include<QVariant>
+#include <QDateTime>
+#include <QPrinter>
+#include <QPrintDialog>
+
 Sante::Sante(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Sante)
@@ -60,6 +91,39 @@ Sante::Sante(QWidget *parent) :
     int aa=ui->label_ph3->width();
     int bb=ui->label_ph3->height();
     ui->label_ph3->setPixmap(pix.scaled(aa,bb,Qt::KeepAspectRatio));
+
+
+    QVector<float> x;
+
+         x=e.stat();
+        // QBarSeries *series = new QBarSeries()
+                  QBarSet *set0 = new QBarSet("100-500");
+                 QBarSet *set1 = new QBarSet("500-1000");
+                 QBarSet *set2 = new QBarSet("1000-2000");
+                 QBarSet *set3 = new QBarSet("+2000");
+
+                 *set0 << x[0];
+                 *set1 << x[1] ;
+                 *set2 << x[2] ;
+                 *set3 << x[3] ;
+         series->append(set0);
+         series->append(set1);
+         series->append(set2);
+         series->append(set3);
+
+
+       //  QChart *chart = new QChart();
+
+         //chart->legend()->hide();
+         chart->addSeries(series);
+         chart->createDefaultAxes();
+         chart->setTitle("Statistique des salaires");
+
+
+         chart->legend()->setVisible(true);
+         chart->legend()->setAlignment(Qt::AlignBottom);
+
+
 }
 Sante::~Sante()
 {
@@ -669,4 +733,30 @@ void Sante::on_pushButton_im_clicked()
 
                 delete document;
 
+}
+
+void Sante::on_reload_stat_clicked()
+{
+    QVector<float> x;
+         x=e.stat();
+
+
+
+
+
+         QBarSeries *series2= new QBarSeries();
+
+         *set0 <<x[0];
+         *set1 <<x[1] ;
+         *set2 << x[2] ;
+         *set3 << x[3] ;
+
+
+    series2->append(set0);
+    series2->append(set1);
+    series2->append(set2);
+    series2->append(set3);
+    chart->removeAllSeries();
+     chart->addSeries(series2);
+     chartView->update();
 }

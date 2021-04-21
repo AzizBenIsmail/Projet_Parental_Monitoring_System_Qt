@@ -4,6 +4,7 @@
 #include <QSqlQuery>
 #include <QtDebug>
 #include <QSqlQueryModel>
+#include<vector>
 
 class suivi
 {
@@ -31,6 +32,7 @@ public:
     bool Supprime(int);
     bool modifier(int,QString);
     bool reset();
+    QVector<float> stat();
     QSqlQueryModel* test();
 
 private:

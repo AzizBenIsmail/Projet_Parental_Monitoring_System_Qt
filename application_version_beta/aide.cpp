@@ -53,6 +53,19 @@ aide::aide(QWidget *parent) :
     QTimer *timer=new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(showTime()));
     timer->start();
+
+    manager = new QNetworkAccessManager();
+       QObject::connect(manager, &QNetworkAccessManager::finished,
+           this, [=](QNetworkReply *reply) {
+               if (reply->error()) {
+                   qDebug() << reply->errorString();
+                   return;
+               }
+               QString answer = reply->readAll();
+
+               qDebug() << answer;
+           }
+       );
 }
 void aide::showTime()
 {

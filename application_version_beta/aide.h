@@ -54,6 +54,9 @@ private:
     Ui::aide *ui;
     QNetworkAccessManager *manager;
     QNetworkRequest request;
+
+
+
 };
 
 #endif // AIDE_H

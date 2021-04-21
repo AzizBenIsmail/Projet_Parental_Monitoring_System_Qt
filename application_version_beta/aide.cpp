@@ -42,7 +42,7 @@ aide::aide(QWidget *parent) :
     ui(new Ui::aide)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/MSI/OneDrive/Bureau/application_version_beta/0.png");
+    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/0.png");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

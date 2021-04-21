@@ -8,7 +8,7 @@ cuisine::cuisine(QWidget *parent) :
     ui(new Ui::cuisine)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/MSI/OneDrive/Bureau/application_version_beta/cui.jpg");
+    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/cui.jpg");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

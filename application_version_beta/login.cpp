@@ -13,11 +13,11 @@ Login::Login(QWidget *parent) :
     ui(new Ui::Login)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/MSI/OneDrive/Bureau/application_version_beta/avatar.png");
+    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/avatar.png");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
-    QPixmap pix1("C:/Users/MSI/OneDrive/Bureau/application_version_beta/..jpg");
+    QPixmap pix1("C:/Users/ASUS/Documents/application_version_beta/..jpg");
     int w1=ui->label_p->width();
     int h1=ui->label_p->height();
     ui->label_p->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));

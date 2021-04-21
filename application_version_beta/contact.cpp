@@ -8,7 +8,7 @@ Contact::Contact(QWidget *parent) :
     ui(new Ui::Contact)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/c.jpg");
+    QPixmap pix("C:/Users/MSI/OneDrive/Bureau/application_version_beta/c.jpg");
     int w=ui->label_p->width();
     int h=ui->label_p->height();
     ui->label_p->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

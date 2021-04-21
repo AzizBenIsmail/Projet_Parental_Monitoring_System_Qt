@@ -16,7 +16,7 @@ Menu::Menu(QWidget *parent) :
     ui(new Ui::Menu)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/9.jpg");
+    QPixmap pix("C:/Users/MSI/OneDrive/Bureau/application_version_beta/9.jpg");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

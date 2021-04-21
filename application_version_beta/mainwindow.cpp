@@ -8,14 +8,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     animation = new QPropertyAnimation(ui->bienvenu, "geometry");
     animation->setDuration(15000);
     animation->setStartValue(ui->bienvenu->geometry());
     animation->setEndValue(QRect(700,700,200,500));
     animation->start();
     // QMessageBox::information(this, "Welcom", "Bonjour et bienvenue à <strong> votre application </strong>");
-QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/Smart-Home-2.jpg");
+QPixmap pix("C:/Users/MSI/OneDrive/Bureau/application_version_beta/Smart-Home-2.jpg");
 int w=ui->label_ph->width();
 int h=ui->label_ph->height();
 ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

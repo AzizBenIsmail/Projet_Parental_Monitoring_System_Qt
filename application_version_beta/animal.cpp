@@ -8,7 +8,7 @@ Animal::Animal(QWidget *parent) :
     ui(new Ui::Animal)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/a.jpg");
+    QPixmap pix("C:/Users/MSI/OneDrive/Bureau/application_version_beta/a.jpg");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

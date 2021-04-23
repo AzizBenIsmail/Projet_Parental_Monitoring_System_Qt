@@ -13,7 +13,7 @@ Note::Note(QWidget *parent) :
     ui(new Ui::Note)
 {
     ui->setupUi(this);
-    QPixmap pix1("C:/Users/ASUS/Documents/application_version_beta/..jpg");
+    QPixmap pix1("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-lamis_officiel/application_version_beta/..jpg");
     int w1=ui->label_ph->width();
     int h1=ui->label_ph->height();
     ui->label_ph->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));

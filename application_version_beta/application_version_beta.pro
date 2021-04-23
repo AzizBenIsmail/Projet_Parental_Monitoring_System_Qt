@@ -18,12 +18,15 @@ SOURCES += \
     activite.cpp \
     admin.cpp \
     aide.cpp \
+    anim.cpp \
     animal.cpp \
     arduino.cpp \
     calculator.cpp \
     connection.cpp \
     contact.cpp \
     cuisine.cpp \
+    fiche_animal.cpp \
+=======
     fourniture.cpp \
     login.cpp \
     main.cpp \
@@ -40,12 +43,15 @@ HEADERS += \
     activite.h \
     admin.h \
     aide.h \
+    anim.h \
     animal.h \
     arduino.h \
     calculator.h \
     connection.h \
     contact.h \
     cuisine.h \
+    fiche_animal.h \
+=======
     fourniture.h \
     login.h \
     mainwindow.h \

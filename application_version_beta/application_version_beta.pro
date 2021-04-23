@@ -26,7 +26,6 @@ SOURCES += \
     contact.cpp \
     cuisine.cpp \
     fiche_animal.cpp \
-=======
     fourniture.cpp \
     login.cpp \
     main.cpp \
@@ -51,7 +50,6 @@ HEADERS += \
     contact.h \
     cuisine.h \
     fiche_animal.h \
-=======
     fourniture.h \
     login.h \
     mainwindow.h \

@@ -16,7 +16,7 @@ calculator::calculator(QWidget *parent) :
     ui(new Ui::calculator)
 {
     ui->setupUi(this);
-    QPixmap pix1("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-lamis_officiel/application_version_beta/m.jpg");
+    QPixmap pix1("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/m.jpg");
     int w1=ui->label_ph->width();
     int h1=ui->label_ph->height();
     ui->label_ph->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));

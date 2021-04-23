@@ -18,7 +18,7 @@ Animal::Animal(QWidget *parent) :
     ui(new Ui::Animal)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/asus/Desktop/application_version_beta/a.jpg");
+    QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-lamis_officiel/application_version_beta/a.jpg");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

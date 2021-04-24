@@ -1319,11 +1319,39 @@ QPushButton::pressed{background-color:lime;}</string>
       <string>Quitter</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_im">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>390</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton::hover
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Imprime</string>
+     </property>
+    </widget>
     <zorder>groupBox_7</zorder>
     <zorder>groupBox_6</zorder>
     <zorder>groupBox</zorder>
     <zorder>pushButton_R</zorder>
     <zorder>pushButton_Q</zorder>
+    <zorder>pushButton_im</zorder>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_8">
@@ -1339,15 +1367,13 @@ QPushButton::pressed{background-color:lime;}</string>
     <string notr="true">font: 22pt &quot;Arial Rounded MT Bold&quot;;</string>
    </property>
    <property name="title">
-    <string>Les animaux de compagnie</string>
-=======
     <string notr="true">QPushButton::hover
 {
 	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
 
 }</string>
    </property>
-   <property name="text">
+   <property name="text" stdset="0">
     <string>Quitter</string>
    </property>
   </widget>

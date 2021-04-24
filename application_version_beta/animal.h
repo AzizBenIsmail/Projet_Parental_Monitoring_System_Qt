@@ -38,6 +38,8 @@ private slots:
 
     void on_Afficher_Fiche_clicked();
 
+    void on_pushButton_im_clicked();
+
 private:
     Ui::Animal *ui;
 };

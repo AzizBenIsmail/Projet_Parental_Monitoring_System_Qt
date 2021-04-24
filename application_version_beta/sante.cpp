@@ -81,7 +81,7 @@ Sante::Sante(QWidget *parent) :
     ui->_id_ajouter->setValidator(new QIntValidator(0,9999999,this));
     ui->lineEdit_idS->setValidator(new QIntValidator(0,9999999,this));
 
-    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/s.jpg");
+    QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/s.jpg");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

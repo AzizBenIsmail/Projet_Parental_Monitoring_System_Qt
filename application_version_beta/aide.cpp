@@ -42,11 +42,11 @@ aide::aide(QWidget *parent) :
     ui(new Ui::aide)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/0.png");
+    QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/0.png");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
-    QPixmap pix1("C:/Users/ASUS/Documents/application_version_beta/...jpg");
+    QPixmap pix1("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/...jpg");
     int w1=ui->label_p->width();
     int h1=ui->label_p->height();
     ui->label_p->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));

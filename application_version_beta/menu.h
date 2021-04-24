@@ -4,6 +4,7 @@
 #include "QString"
 #include <QDialog>
 #include "admin.h"
+#include "arduino.h"
 namespace Ui {
 class Menu;
 }
@@ -57,6 +58,7 @@ private slots:
 
 private:
     Ui::Menu *ui;
+        Arduino A;
 };
 
 #endif // MENU_H

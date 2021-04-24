@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     animation = new QPropertyAnimation(ui->bienvenu, "geometry");
     animation->setDuration(15000);
     animation->setStartValue(ui->bienvenu->geometry());

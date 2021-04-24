@@ -15,37 +15,47 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    activite.cpp \
     admin.cpp \
     aide.cpp \
     animal.cpp \
+    arduino.cpp \
     calculator.cpp \
     connection.cpp \
     contact.cpp \
     cuisine.cpp \
+    enfant.cpp \
+    fourniture.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
     medicament.cpp \
     menu.cpp \
     note.cpp \
+    prestataire.cpp \
     programme.cpp \
     sante.cpp \
     securite.cpp \
     suivi.cpp
 
 HEADERS += \
+    activite.h \
     admin.h \
     aide.h \
     animal.h \
+    arduino.h \
     calculator.h \
     connection.h \
     contact.h \
     cuisine.h \
+    enfant.h \
+    fourniture.h \
     login.h \
     mainwindow.h \
     medicament.h \
     menu.h \
     note.h \
+    prestataire.h \
     programme.h \
     sante.h \
     securite.h \

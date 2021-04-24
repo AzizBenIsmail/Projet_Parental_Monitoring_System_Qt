@@ -3,6 +3,13 @@
 #include"suivi.h"
 #include <QDialog>
 #include "medicament.h"
+#include<QtCharts>
+#include<QChartView>
+#include<QLineSeries>
+#include <QDate>
+#include <QtCharts/QHorizontalStackedBarSeries>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 namespace Ui {
 class Sante;
 }
@@ -86,10 +93,27 @@ private slots:
 
     void on_id_modify_textChanged(const QString &arg1);
 
+    void on__id_m_2_textChanged(const QString &arg1);
+
+    void on_lineEdit_idS_m_textChanged(const QString &arg1);
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_im_clicked();
+
+    void on_reload_stat_clicked();
+
 private:
     Ui::Sante *ui;
     suivi e;
     MEDICAMENT m;
+    QBarSeries *series = new QBarSeries();
+    QChart *chart = new QChart();
+    QChartView *chartView = new QChartView(chart);
+    QBarSet *set0 = new QBarSet("100-500");
+   QBarSet *set1 = new QBarSet("500-1000");
+   QBarSet *set2 = new QBarSet("1000-2000");
+   QBarSet *set3 = new QBarSet("+2000");
 };
 
 #endif // SANTE_H

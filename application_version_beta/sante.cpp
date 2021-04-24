@@ -40,6 +40,37 @@
 #include <QDateTime>
 #include <QPrinter>
 #include <QPrintDialog>
+
+
+#include <QSqlQuery>
+#include <QMessageBox>
+#include <QSqlError>
+#include <iostream>
+#include <QDebug>
+#include <QRadioButton>
+#include <QtPrintSupport/QPrinter>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QFileDialog>
+#include <QTextDocument>
+#include <QTextEdit>
+#include <QtSql/QSqlQueryModel>
+#include <QtPrintSupport/QPrinter>
+#include <QVector2D>
+#include <QVector>
+#include <QSqlQuery>
+#include<QDesktopServices>
+#include<QUrl>
+#include <QPixmap>
+#include <QTabWidget>
+#include <QValidator>
+#include <QPrintDialog>
+#include<QtSql/QSqlQuery>
+#include<QVariant>
+#include <QDateTime>
+#include <QPrinter>
+#include <QPrintDialog>
+
 Sante::Sante(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Sante)
@@ -60,6 +91,39 @@ Sante::Sante(QWidget *parent) :
     int aa=ui->label_ph3->width();
     int bb=ui->label_ph3->height();
     ui->label_ph3->setPixmap(pix.scaled(aa,bb,Qt::KeepAspectRatio));
+
+
+    QVector<float> x;
+
+         x=e.stat();
+        // QBarSeries *series = new QBarSeries()
+                  QBarSet *set0 = new QBarSet("100-500");
+                 QBarSet *set1 = new QBarSet("500-1000");
+                 QBarSet *set2 = new QBarSet("1000-2000");
+                 QBarSet *set3 = new QBarSet("+2000");
+
+                 *set0 << x[0];
+                 *set1 << x[1] ;
+                 *set2 << x[2] ;
+                 *set3 << x[3] ;
+         series->append(set0);
+         series->append(set1);
+         series->append(set2);
+         series->append(set3);
+
+
+       //  QChart *chart = new QChart();
+
+         //chart->legend()->hide();
+         chart->addSeries(series);
+         chart->createDefaultAxes();
+         chart->setTitle("Statistique des salaires");
+
+
+         chart->legend()->setVisible(true);
+         chart->legend()->setAlignment(Qt::AlignBottom);
+
+
 }
 Sante::~Sante()
 {
@@ -383,7 +447,7 @@ void Sante::on_Tri_Taille_2_clicked()
 }
 void Sante::on_pushm_clicked()
 {
-    int id=ui->_id_m->text().toInt();
+    int id=ui->_id_m_2->text().toInt();
         double Quantite=ui->_Quantite->text().toDouble();
         double Prix=ui->Prix->text().toDouble();
         QString date=ui->_date_m->text();
@@ -486,7 +550,7 @@ void Sante::on_pushButton_enregistre_clicked()
         "<body bgcolor=#ffffff link=#5000A0>\n"
 
         //     "<align='right'> " << datefich << "</align>"
-        "<center> <H1>Liste Des Fournisseurs </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
+        "<center> <H1>Liste Des suivi </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
 
     // headers
     out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";
@@ -534,7 +598,7 @@ void Sante::on_Psearch_5_textChanged(const QString &arg1)
 {
     QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery   *query= new QSqlQuery();
-    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or tension LIKE'"+arg1+"%' ");
+    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or dat LIKE'"+arg1+"%' ");
      query->exec();
      if (query->next()) {
      model->setQuery(*query);
@@ -549,7 +613,6 @@ void Sante::on_Psearch_5_textChanged(const QString &arg1)
 
 void Sante::on_id_textChanged(const QString &arg1)
 {
-    QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery   *query= new QSqlQuery();
     query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or tension LIKE'"+arg1+"%' ");
      query->exec();
@@ -563,28 +626,137 @@ void Sante::on_id_textChanged(const QString &arg1)
 
 void Sante::on_id_modify_textChanged(const QString &arg1)
 {
-    QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery   *query= new QSqlQuery();
-    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or tension LIKE'"+arg1+"%' ");
+    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%'");
      query->exec();
      if (query->next()) { }
      else {
          QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
                          QObject::tr("NO MATCH FOUND !.\n"
                                      "Click Cancel to exit."), QMessageBox::Cancel);
-         ui->Psearch_5->clear();}
+         ui->id_modify->clear();}
 }
 
 void Sante::on_lineEdit_idS_textChanged(const QString &arg1)
 {
-    QSqlQueryModel *model= new QSqlQueryModel();
     QSqlQuery   *query= new QSqlQuery();
-    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%' or taille  LIKE'"+arg1+"%' or poid  LIKE'"+arg1+"%' or tension LIKE'"+arg1+"%' ");
+    query->prepare("SELECT * FROM suivi WHERE ID  LIKE'"+arg1+"%'");
      query->exec();
      if (query->next()) { }
      else {
          QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
                          QObject::tr("NO MATCH FOUND !.\n"
                                      "Click Cancel to exit."), QMessageBox::Cancel);
-         ui->Psearch_5->clear();}
+         ui->lineEdit_idS->clear();}
+}
+
+void Sante::on__id_m_2_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM MEDICAMENT WHERE ID  LIKE'"+arg1+"%'");
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         ui->_id_m_2->clear();}
+}
+
+void Sante::on_lineEdit_idS_m_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM MEDICAMENT WHERE ID  LIKE'"+arg1+"%'");
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         ui->lineEdit_idS_m->clear();}
+}
+
+void Sante::on_pushButton_6_clicked()
+{
+    ui->tableView_aff->setModel(e.afficher_poidsideal());
+
+}
+
+void Sante::on_pushButton_im_clicked()
+{
+
+        QString strStream;
+                QTextStream out(&strStream);
+
+
+
+                const int rowCount = ui->tableView_aff->model()->rowCount();
+                const int columnCount = ui->tableView_aff->model()->columnCount();
+
+                out <<  "<html>\n"
+                    "<head>\n"
+
+                    "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                    <<  QString("<title>%60 les postes</title>\n").arg("poste")
+                    <<  "</head>\n"
+                    "<body bgcolor=#ffffff link=#5000A0>\n"
+                    "<table border=1 cellspacing=0 cellpadding=2>\n";
+                out << "<thead><tr bgcolor=#f0f0f0>";
+                for (int column = 0; column < columnCount; column++)
+                    if (! ui->tableView_aff->isColumnHidden(column))
+                        out << QString("<th>%1</th>").arg(ui->tableView_aff->model()->headerData(column, Qt::Horizontal).toString());
+                out << "</tr></thead>\n";
+
+                for (int row = 0; row < rowCount; row++) {
+                    out << "<tr>";
+                    for (int column = 0; column < columnCount; column++) {
+                        if (!ui->tableView_aff->isColumnHidden(column)) {
+                            QString data = ui->tableView_aff->model()->data(ui->tableView_aff->model()->index(row, column)).toString().simplified();
+                            out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                        }
+                    }
+                    out << "</tr>\n";
+                }
+                out <<  "</table>\n"
+                    "</body>\n"
+                    "</html>\n";
+
+                QTextDocument *document = new QTextDocument();
+                document->setHtml(strStream);
+
+                QPrinter printer;
+
+                QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+                if (dialog->exec() == QDialog::Accepted) {
+                    document->print(&printer);
+                }
+
+                delete document;
+
+}
+
+void Sante::on_reload_stat_clicked()
+{
+    QVector<float> x;
+         x=e.stat();
+
+
+
+
+
+         QBarSeries *series2= new QBarSeries();
+
+         *set0 <<x[0];
+         *set1 <<x[1] ;
+         *set2 << x[2] ;
+         *set3 << x[3] ;
+
+
+    series2->append(set0);
+    series2->append(set1);
+    series2->append(set2);
+    series2->append(set3);
+    chart->removeAllSeries();
+     chart->addSeries(series2);
+     chartView->update();
 }

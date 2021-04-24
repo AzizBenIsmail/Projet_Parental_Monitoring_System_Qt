@@ -4,6 +4,7 @@
 #include <QSqlQuery>
 #include <QtDebug>
 #include <QSqlQueryModel>
+#include<vector>
 
 class suivi
 {
@@ -26,10 +27,12 @@ public:
     QSqlQueryModel* afficher_id();
     QSqlQueryModel* afficher_poid();
     QSqlQueryModel* afficher_taille();
+    QSqlQueryModel* afficher_poidsideal();
 
     bool Supprime(int);
     bool modifier(int,QString);
     bool reset();
+    QVector<float> stat();
     QSqlQueryModel* test();
 
 private:

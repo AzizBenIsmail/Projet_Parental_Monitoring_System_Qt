@@ -26,9 +26,8 @@ SOURCES += \
     contact.cpp \
     cuisine.cpp \
     enfant.cpp \
-=======
     fiche_animal.cpp \
-
+    fiche_animal.cpp \
     fourniture.cpp \
     login.cpp \
     main.cpp \
@@ -54,7 +53,6 @@ HEADERS += \
     contact.h \
     cuisine.h \
     enfant.h \
-=======
     fiche_animal.h \
     fourniture.h \
     login.h \
@@ -67,7 +65,6 @@ HEADERS += \
     sante.h \
     securite.h \
     suivi.h
-
 FORMS += \
     aide.ui \
     animal.ui \

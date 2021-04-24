@@ -25,6 +25,7 @@ SOURCES += \
     connection.cpp \
     contact.cpp \
     cuisine.cpp \
+    enfant.cpp \
     fiche_animal.cpp \
     fourniture.cpp \
     login.cpp \
@@ -33,6 +34,7 @@ SOURCES += \
     medicament.cpp \
     menu.cpp \
     note.cpp \
+    prestataire.cpp \
     programme.cpp \
     sante.cpp \
     securite.cpp \
@@ -49,6 +51,7 @@ HEADERS += \
     connection.h \
     contact.h \
     cuisine.h \
+    enfant.h \
     fiche_animal.h \
     fourniture.h \
     login.h \
@@ -56,11 +59,11 @@ HEADERS += \
     medicament.h \
     menu.h \
     note.h \
+    prestataire.h \
     programme.h \
     sante.h \
     securite.h \
     suivi.h
-
 FORMS += \
     aide.ui \
     animal.ui \

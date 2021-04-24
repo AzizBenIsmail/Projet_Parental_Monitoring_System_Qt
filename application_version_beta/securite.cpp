@@ -9,7 +9,7 @@ Securite::Securite(QWidget *parent) :
     ui(new Ui::Securite)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/5.jpg");
+    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/5.jpg");
     int w=ui->label_p->width();
     int h=ui->label_p->height();
     ui->label_p->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

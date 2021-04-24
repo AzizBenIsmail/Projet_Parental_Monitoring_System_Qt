@@ -20,26 +20,6 @@ private slots:
 
     void on_pushButton_Q_clicked();
 
-    void on_Ajouter_FICHE_clicked();
-
-    void on_Supprimer_fiche_clicked();
-
-    void on_PDF_clicked();
-
-    void on_Supprimer_clicked();
-
-    void on_Afficher_clicked();
-
-    void on_Tr_Animal_clicked();
-
-    void on_Ajouter_clicked();
-
-    void on_txt_recherche_animal_textChanged(const QString &arg1);
-
-    void on_Afficher_Fiche_clicked();
-
-    void on_pushButton_im_clicked();
-
 private:
     Ui::Animal *ui;
 };

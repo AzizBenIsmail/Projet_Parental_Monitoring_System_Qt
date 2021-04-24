@@ -52,7 +52,7 @@ programme::programme(QWidget *parent) :
     ui(new Ui::programme)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/pro.jpg");
+    QPixmap pix("C:/Users/ASUS/Documents/application_version_beta/pro.jpg");
     int w=ui->label_a->width();
     int h=ui->label_a->height();
     ui->label_a->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));

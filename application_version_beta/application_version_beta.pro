@@ -27,6 +27,7 @@ SOURCES += \
     cuisine.cpp \
     enfant.cpp \
     fiche_animal.cpp \
+    fiche_animal.cpp \
     fourniture.cpp \
     login.cpp \
     main.cpp \

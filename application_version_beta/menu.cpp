@@ -14,12 +14,13 @@
 #include "capteur_dincendie.h"
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
+
 Menu::Menu(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Menu)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/9.jpg");
+   QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/9.jpg");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
@@ -130,20 +131,19 @@ void Menu::on_pushButton_cui_clicked()
 }
 
 
-void Menu::update_label()
+void Menu::label_5()
 {
     data=A.read_from_arduino();
 
-   if(data==1)
-    {
-       QMessageBox::critical(nullptr, QObject::tr("sup errer"),
-                                        QObject::tr("Id n'excete pas.\n"
-                                                    "Click Cancel to exit."), QMessageBox::Cancel);
-    }
-     else if (data==0)
-    {
-        QMessageBox::information(this, "Helloo", "Alors bienvenue!");
-    }
+    if(data=="1")
+
+        ui->label_5->setText("ON"); // si les données reçues de arduino via la liaison série sont égales à 1
+    // alors afficher ON
+
+    else if (data=="0")
+
+        ui->label_5->setText("OFF");   // si les données reçues de arduino via la liaison série sont égales à 0
+     //alors afficher ON
 }
 
 void Menu::on_pushButton99_7_clicked()

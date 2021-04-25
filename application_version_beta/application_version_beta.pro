@@ -22,7 +22,6 @@ SOURCES += \
     animal.cpp \
     arduino.cpp \
     calculator.cpp \
-    capteur_dincendie.cpp \
     connection.cpp \
     contact.cpp \
     cuisine.cpp \
@@ -49,7 +48,6 @@ HEADERS += \
     animal.h \
     arduino.h \
     calculator.h \
-    capteur_dincendie.h \
     connection.h \
     contact.h \
     cuisine.h \

@@ -16,6 +16,8 @@ public:
     ~capteur_dincendie();
 
 private slots:
+    void update_label();   // slot permettant la mise à jour du label état de la lampe 1,
+    // ce slot est lancé à chaque réception d'un message de Arduino
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();

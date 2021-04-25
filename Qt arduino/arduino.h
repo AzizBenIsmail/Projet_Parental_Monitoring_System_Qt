@@ -4,6 +4,7 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QDebug>
 
+
 class Arduino
 {
 public:     //méthodes de la classe Arduino
@@ -23,5 +24,7 @@ QString arduino_port_name;
 bool arduino_is_available;
 QByteArray data;  // contenant les données lues à partir d'Arduino
 };
+
+
 
 #endif // ARDUINO_H

@@ -42,8 +42,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>630</y>
+     <x>20</x>
+     <y>740</y>
      <width>121</width>
      <height>23</height>
     </rect>
@@ -62,8 +62,8 @@
   <widget class="QPushButton" name="pushButton_Q">
    <property name="geometry">
     <rect>
-     <x>940</x>
-     <y>630</y>
+     <x>1080</x>
+     <y>740</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -85,14 +85,14 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>60</y>
+     <x>140</x>
+     <y>140</y>
      <width>971</width>
      <height>561</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -251,6 +251,26 @@
         <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
+      </property>
      </widget>
      <widget class="QLineEdit" name="nom_prenom">
       <property name="geometry">
@@ -260,6 +280,26 @@
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="etat_psycologique">
@@ -271,6 +311,26 @@
         <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
+      </property>
      </widget>
      <widget class="QLineEdit" name="talent">
       <property name="geometry">
@@ -281,6 +341,26 @@
         <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
+      </property>
      </widget>
      <widget class="QLineEdit" name="sexe">
       <property name="geometry">
@@ -290,6 +370,26 @@
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_ae">
@@ -338,7 +438,7 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;
       <rect>
        <x>290</x>
        <y>10</y>
-       <width>371</width>
+       <width>641</width>
        <height>281</height>
       </rect>
      </property>
@@ -361,7 +461,7 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;
        <rect>
         <x>20</x>
         <y>60</y>
-        <width>331</width>
+        <width>601</width>
         <height>192</height>
        </rect>
       </property>
@@ -390,8 +490,8 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;
     <widget class="QGroupBox" name="groupBox_6">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>320</y>
+       <x>540</x>
+       <y>310</y>
        <width>221</width>
        <height>131</height>
       </rect>
@@ -462,6 +562,26 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
       </property>
      </widget>
     </widget>
@@ -545,8 +665,8 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;
     <widget class="QGroupBox" name="groupBox_7">
      <property name="geometry">
       <rect>
-       <x>540</x>
-       <y>320</y>
+       <x>810</x>
+       <y>380</y>
        <width>131</width>
        <height>131</height>
       </rect>
@@ -603,7 +723,7 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;
       <rect>
        <x>380</x>
        <y>10</y>
-       <width>411</width>
+       <width>571</width>
        <height>321</height>
       </rect>
      </property>
@@ -656,7 +776,7 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;
        <rect>
         <x>20</x>
         <y>110</y>
-        <width>361</width>
+        <width>531</width>
         <height>161</height>
        </rect>
       </property>
@@ -738,8 +858,8 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
     <widget class="QGroupBox" name="groupBox_3">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>330</y>
+       <x>600</x>
+       <y>360</y>
        <width>311</width>
        <height>141</height>
       </rect>
@@ -1230,6 +1350,26 @@ color: rgb(150, 100, 0);</string>
         <height>21</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
+      </property>
      </widget>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
@@ -1536,6 +1676,26 @@ color: rgb(95, 63, 0);
         <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
+      </property>
      </widget>
      <widget class="QLineEdit" name="prenompres">
       <property name="geometry">
@@ -1545,6 +1705,26 @@ color: rgb(95, 63, 0);
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="salairepres">
@@ -1556,6 +1736,26 @@ color: rgb(95, 63, 0);
         <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
+      </property>
      </widget>
      <widget class="QLineEdit" name="specialitepres">
       <property name="geometry">
@@ -1565,6 +1765,26 @@ color: rgb(95, 63, 0);
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="nbr_heurespres">
@@ -1576,6 +1796,26 @@ color: rgb(95, 63, 0);
         <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
+      </property>
      </widget>
      <widget class="QLineEdit" name="telpres">
       <property name="geometry">
@@ -1585,6 +1825,26 @@ color: rgb(95, 63, 0);
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="adressepres">
@@ -1596,6 +1856,26 @@ color: rgb(95, 63, 0);
         <height>20</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
+      </property>
      </widget>
      <widget class="QLineEdit" name="sexepres">
       <property name="geometry">
@@ -1605,6 +1885,26 @@ color: rgb(95, 63, 0);
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_2">
@@ -1664,6 +1964,26 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
         <width>113</width>
         <height>20</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+    background-color: white;
+    box-shadow: 2px 0.5px 5px 1px inset black;
+    border-radius: 5px;
+    width: 70%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: #000;
+    font-size:inherit;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-weight:normal;
+    font-variant:normal;
+}
+QLineEdit::hover{  color: black ;
+background-color:orange;}
+QLineEdit::focus{  color: black ;
+background-color:white;}</string>
       </property>
      </widget>
     </widget>

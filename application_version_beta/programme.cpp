@@ -55,7 +55,15 @@ programme::programme(QWidget *parent) :
     QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/pro.jpg");
     int w=ui->label_a->width();
     int h=ui->label_a->height();
+    QPixmap pix1("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/...jpg");
+    int w1=ui->label_pp->width();
+    int h1=ui->label_pp->height();
     ui->label_a->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+    ui->label_pp->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));
+    QPixmap pix2("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/...jpg");
+    //int w2=ui->label_5->width();
+    //int h2=ui->label_5->height();
+   // ui->label_a->setPixmap(pix2.scaled(w2,h2,Qt::KeepAspectRatio));
     ui->tableView_aff_h->setModel(f.afficher());
     ui->tableView_aff_ha->setModel(a.afficher());
 }

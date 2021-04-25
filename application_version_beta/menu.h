@@ -16,6 +16,7 @@ class Menu : public QDialog
 public:
     explicit Menu(QWidget *parent = nullptr);
     void setClient(admin l);
+    void update_label();
     ~Menu();
 
 private slots:
@@ -56,9 +57,19 @@ private slots:
 
     void on_pushButton_cui_clicked();
 
+    void on_pushButton99_clicked();
+
+    void on_pushButton99_2_clicked();
+
+    void on_pushButton99_7_clicked();
+
+    void on_pushButton99_8_clicked();
+
 private:
     Ui::Menu *ui;
-        Arduino A;
+    int data; // variable contenant les données reçues
+
+    Arduino A; // objet temporaire
 };
 
 #endif // MENU_H

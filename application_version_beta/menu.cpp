@@ -11,6 +11,9 @@
 #include "contact.h"
 #include "programme.h"
 #include "cuisine.h"
+#include "capteur_dincendie.h"
+#include <QtSerialPort/QSerialPort>
+#include <QtSerialPort/QSerialPortInfo>
 Menu::Menu(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Menu)
@@ -24,14 +27,15 @@ Menu::Menu(QWidget *parent) :
     connect(timer,SIGNAL(timeout()),this,SLOT(showTime()));
     timer->start();
     int ret=A.connect_arduino(); // lancer la connexion à arduino
-        switch(ret){
-        case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
-            break;
-        case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
-           break;
-        case(-1):qDebug() << "arduino is not available";
-        }
-         QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+    switch(ret){
+    case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+        break;
+    case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+       break;
+    case(-1):qDebug() << "arduino is not available";
+    }
+     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+     //le slot update_label suite à la reception du signal readyRead (reception des données).
 
 }
 void Menu::showTime()
@@ -44,6 +48,7 @@ void Menu::showTime()
     }
     ui->Digital_clock->setText(time_texte);
 }
+
 
 Menu::~Menu()
 {
@@ -122,4 +127,31 @@ void Menu::on_pushButton_cui_clicked()
     hide();
     cuisine cui;
     cui.exec();
+}
+
+
+void Menu::update_label()
+{
+    data=A.read_from_arduino();
+
+   if(data==1)
+    {
+       QMessageBox::critical(nullptr, QObject::tr("sup errer"),
+                                        QObject::tr("Id n'excete pas.\n"
+                                                    "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+     else if (data==0)
+    {
+        QMessageBox::information(this, "Helloo", "Alors bienvenue!");
+    }
+}
+
+void Menu::on_pushButton99_7_clicked()
+{
+    A.write_to_arduino("1"); //envoyer 1 à arduino
+}
+
+void Menu::on_pushButton99_8_clicked()
+{
+     A.write_to_arduino("0");
 }

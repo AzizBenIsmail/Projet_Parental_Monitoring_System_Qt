@@ -57,12 +57,12 @@ int Arduino::close_arduino()
 }
 
 
- QByteArray Arduino::read_from_arduino()
+ int Arduino::read_from_arduino()
 {
     if(serial->isReadable()){
          data=serial->readAll(); //récupérer les données reçues
 
-         return data;
+         return 1;
     }
  }
 

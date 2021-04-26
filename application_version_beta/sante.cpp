@@ -9,9 +9,6 @@
 #include <medicament.h>
 #include <QPrintDialog>
 #include <QtPrintSupport/QPrinter>
-
-
-
 #include <QSqlQuery>
 #include <QMessageBox>
 #include <QSqlError>

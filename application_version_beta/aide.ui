@@ -334,6 +334,19 @@ background-color:white;}</string>
     </property>
    </widget>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>40</y>
+     <width>261</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; font-style:italic; color:#ff5500;&quot;&gt;Aide&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
   <zorder>label_p</zorder>
   <zorder>label_ph</zorder>
   <zorder>groupBox</zorder>
@@ -344,6 +357,7 @@ background-color:white;}</string>
   <zorder>pushButton_Cal</zorder>
   <zorder>calendarWidget</zorder>
   <zorder>groupBox_2</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>

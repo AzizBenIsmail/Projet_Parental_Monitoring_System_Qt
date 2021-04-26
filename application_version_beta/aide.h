@@ -34,11 +34,6 @@ private slots:
 
     void on_pushButton_Q_clicked();
 
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_Note_clicked();
-
-    void on_pushButton_N_clicked();
 
     void on_pushButton_note_clicked();
 
@@ -49,6 +44,11 @@ private slots:
     void on_sav_clicked();
 
     void on_envoyer_clicked();
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_Note_clicked();
+
+    void on_pushButton_N_clicked();
 
 private:
     Ui::aide *ui;

@@ -387,6 +387,19 @@
     <string>1</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>60</y>
+     <width>261</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; font-style:italic; text-decoration: underline; color:#ff5500;&quot;&gt;Menu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
   <zorder>label_ph</zorder>
   <zorder>pushButton_Contact</zorder>
   <zorder>pushButton_Sante</zorder>
@@ -400,6 +413,7 @@
   <zorder>pushButton_cui</zorder>
   <zorder>groupBox</zorder>
   <zorder>label_5</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
  <connections/>

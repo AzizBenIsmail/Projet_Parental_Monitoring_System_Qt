@@ -30,21 +30,25 @@ void loop() {
   int Valeur=analogRead(A0);
  int Vout=Valeur*5.0/1023*1000;
  int temp=Vout/10;
+  Serial.println(temp);
  lcd.setCursor(7,0);
  lcd.print(temp);
- if(temp>49)
+ if(temp>30)
  {
   digitalWrite(ledg,LOW);
   digitalWrite(ledr,HIGH);
   delay(90);
   digitalWrite(ledr,LOW);
   delay(90);
+
+  Serial.write('1');
  }else
  {  digitalWrite(ledr,LOW);
+noTone(Buzzer);
   digitalWrite(ledg,HIGH);
-  
+  Serial.write('0');
  }
-if (Serial.available()){     
+ if (Serial.available()){     
     //Si un message a été reçu  faire ceci
      data=Serial.read();  
      // controler la lampe 1 reliée à la broche 13
@@ -52,17 +56,13 @@ if (Serial.available()){
      if(data=='1') //si le caractère lu est égale à 1
     {
     
-      tone(Buzzer,450);
-
-     
+      tone(Buzzer,450);     
       // alumer la lampe 
-      Serial.write('1'); //envoyer le nouvel état de la lampe  
      }  
      else if(data=='0') //si le caractère lu est égale à 0
 
      {
         noTone(Buzzer); //éteindre la lampe
-        Serial.write('0'); //envoyer le nouvel état de la lampe
      
      }   
 

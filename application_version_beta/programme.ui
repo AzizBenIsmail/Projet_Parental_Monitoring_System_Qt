@@ -49,7 +49,7 @@
   <widget class="QLabel" name="label_a">
    <property name="geometry">
     <rect>
-     <x>-10</x>
+     <x>-100</x>
      <y>-120</y>
      <width>1821</width>
      <height>1171</height>
@@ -95,7 +95,7 @@
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <property name="documentMode">
     <bool>false</bool>
@@ -3801,7 +3801,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QLabel" name="label_ph_2">
      <property name="geometry">
       <rect>
-       <x>-30</x>
+       <x>-50</x>
        <y>-60</y>
        <width>1171</width>
        <height>691</height>
@@ -4521,6 +4521,23 @@ QPushButton::hover
       <string>Actualise</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_pp_2">
+     <property name="geometry">
+      <rect>
+       <x>-70</x>
+       <y>-90</y>
+       <width>1331</width>
+       <height>831</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label_pp_2</zorder>
     <zorder>label_ph_2</zorder>
     <zorder>groupBox_3</zorder>
     <zorder>groupBox_6</zorder>

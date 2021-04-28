@@ -25,6 +25,20 @@ Animal::Animal(QWidget *parent) :
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
     ui->label_ph->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+    QPixmap pix1("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/a.jpg");
+    int w1=ui->label_ph_4->width();
+    int h1=ui->label_ph_4->height();
+    ui->label_ph_4->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));
+    QPixmap pix2("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/a.jpg");
+    int w2=ui->label_ph_3->width();
+    int h2=ui->label_ph_3->height();
+    ui->label_ph_3->setPixmap(pix2.scaled(w2,h2,Qt::KeepAspectRatio));
+
+    ui->tableView->setModel(a.afficher());
+
+
+
+          ui->tableView_2->setModel(b.afficher());
 }
 
 Animal::~Animal()

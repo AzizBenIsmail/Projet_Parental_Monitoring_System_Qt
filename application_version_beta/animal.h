@@ -1,6 +1,7 @@
 #ifndef ANIMAL_H
 #define ANIMAL_H
-
+#include "anim.h"
+#include "fiche_animal.h"
 #include <QDialog>
 
 namespace Ui {
@@ -42,6 +43,8 @@ private slots:
 
 private:
     Ui::Animal *ui;
+    Anim a;
+    Fiche_animal b;
 };
 
 #endif // ANIMAL_H

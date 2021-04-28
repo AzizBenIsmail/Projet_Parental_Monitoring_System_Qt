@@ -3053,7 +3053,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
    <property name="geometry">
     <rect>
      <x>830</x>
-     <y>580</y>
+     <y>600</y>
      <width>251</width>
      <height>131</height>
     </rect>
@@ -3071,8 +3071,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
    <widget class="QPushButton" name="pushButton99_7">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>80</y>
+      <x>110</x>
+      <y>40</y>
       <width>61</width>
       <height>23</height>
      </rect>
@@ -3098,8 +3098,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
    <widget class="QPushButton" name="pushButton99_8">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>80</y>
+      <x>190</x>
+      <y>40</y>
       <width>51</width>
       <height>23</height>
      </rect>
@@ -3122,17 +3122,43 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <string>OFF</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>30</y>
+      <x>20</x>
+      <y>40</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Buzzer</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>80</y>
       <width>47</width>
-      <height>20</height>
+      <height>14</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Etat </string>
     </property>
    </widget>
   </widget>

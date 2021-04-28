@@ -131,19 +131,19 @@ void Menu::on_pushButton_cui_clicked()
 }
 
 
-void Menu::label_5()
+void Menu::update_label()
 {
     data=A.read_from_arduino();
 
-  /*  if(data=="1")
+    if(data=="1"){
 
-        ui->label_5->setText("ON"); // si les données reçues de arduino via la liaison série sont égales à 1
+        ui->label_5->setText("probleme urgent"); // si les données reçues de arduino via la liaison série sont égales à 1
     // alors afficher ON
 
-    else if (data=="0")
+}else
 
-        ui->label_5->setText("OFF");   // si les données reçues de arduino via la liaison série sont égales à 0
-     //alors afficher ON*/
+        ui->label_5->setText("Normal");   // si les données reçues de arduino via la liaison série sont égales à 0
+     //alors afficher ON
 }
 
 void Menu::on_pushButton99_7_clicked()

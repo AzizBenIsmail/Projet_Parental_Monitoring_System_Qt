@@ -20,7 +20,8 @@ public:
     ~Menu();
 
 private slots:
-    void label_5();
+    void update_label();   // slot permettant la mise à jour du label état de la lampe 1,
+    // ce slot est lancé à chaque réception d'un message de Arduino
     void showTime();
     void on_pushButton_retour_clicked();
 
@@ -72,6 +73,7 @@ private slots:
 
 private:
     Ui::Menu *ui;
+
     QByteArray data; // variable contenant les données reçues
 
     Arduino A; // objet temporaire

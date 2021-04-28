@@ -21,6 +21,7 @@ SOURCES += \
     anim.cpp \
     animal.cpp \
     arduino.cpp \
+    boutique.cpp \
     calculator.cpp \
     connection.cpp \
     contact.cpp \
@@ -40,7 +41,8 @@ SOURCES += \
     programme.cpp \
     sante.cpp \
     securite.cpp \
-    suivi.cpp
+    suivi.cpp \
+    vetement.cpp
 
 HEADERS += \
     activite.h \
@@ -49,6 +51,7 @@ HEADERS += \
     anim.h \
     animal.h \
     arduino.h \
+    boutique.h \
     calculator.h \
     connection.h \
     contact.h \
@@ -67,7 +70,8 @@ HEADERS += \
     programme.h \
     sante.h \
     securite.h \
-    suivi.h
+    suivi.h \
+    vetement.h
 FORMS += \
     aide.ui \
     animal.ui \

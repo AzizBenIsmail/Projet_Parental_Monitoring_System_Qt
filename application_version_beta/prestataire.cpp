@@ -156,13 +156,13 @@ void prestataire::setadressepres(QString adressepres)
           model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifain"));
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("nompres"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("prenompres"));
-          model->setHeaderData(2, Qt::Horizontal, QObject::tr("salairepres"));
-          model->setHeaderData(2, Qt::Horizontal, QObject::tr("specialitepres"));
-           model->setHeaderData(2, Qt::Horizontal, QObject::tr("dateembauchepres"));
-            model->setHeaderData(2, Qt::Horizontal, QObject::tr("nbr_heurespres"));
-             model->setHeaderData(2, Qt::Horizontal, QObject::tr("telpres"));
-              model->setHeaderData(2, Qt::Horizontal, QObject::tr("adressepres"));
-               model->setHeaderData(2, Qt::Horizontal, QObject::tr("sexepres"));
+          model->setHeaderData(3, Qt::Horizontal, QObject::tr("salairepres"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("specialitepres"));
+           model->setHeaderData(5, Qt::Horizontal, QObject::tr("dateembauchepres"));
+            model->setHeaderData(6, Qt::Horizontal, QObject::tr("nbr_heurespres"));
+             model->setHeaderData(7, Qt::Horizontal, QObject::tr("telpres"));
+              model->setHeaderData(8, Qt::Horizontal, QObject::tr("adressepres"));
+               model->setHeaderData(9, Qt::Horizontal, QObject::tr("sexepres"));
           return model;
  }
   /*QSqlQueryModel* afficher_id()

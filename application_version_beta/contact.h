@@ -59,6 +59,8 @@ private slots:
 
     void on_lineEdit_SP_textChanged(const QString &arg1);
 
+    void on_tableView_aff_activated(const QModelIndex &index);
+
 private:
     Ui::Contact *ui;
     prestataire P;

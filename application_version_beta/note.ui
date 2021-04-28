@@ -112,13 +112,28 @@ background-color:white;}</string>
      <widget class="QPushButton" name="pushButton_lire">
       <property name="font">
        <font>
-        <pointsize>11</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">QPushButton::hover
+       <string notr="true">QPushButton
+{
+background:rgb(0, 0, 0);
+border-radius :60px;
+}
+
+QPushButton
+{
+	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+	color:#FFA07A ;
+border-radius:15px;
+}
+QPushButton::hover
 {
 	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
 
@@ -135,13 +150,28 @@ background-color:white;}</string>
        <widget class="QPushButton" name="pushButton_ecrire">
         <property name="font">
          <font>
+          <family>MS Shell Dlg 2</family>
           <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton::hover
+         <string notr="true">QPushButton
+{
+background:rgb(0, 0, 0);
+border-radius :60px;
+}
+
+QPushButton
+{
+	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+
+	color:#FFA07A ;
+border-radius:15px;
+}
+QPushButton::hover
 {
 	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgb(108, 135, 255));
 
@@ -174,19 +204,6 @@ background-color:white;}</string>
    </property>
    <property name="text">
     <string>Quitter</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>510</x>
-     <y>20</y>
-     <width>261</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; font-weight:600; font-style:italic; color:#ff5500;&quot;&gt;Note&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

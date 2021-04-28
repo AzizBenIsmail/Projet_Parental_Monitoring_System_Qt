@@ -28,6 +28,8 @@ SOURCES += \
     enfant.cpp \
     fiche_animal.cpp \
     fourniture.cpp \
+    ingr.cpp \
+    ingredient.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -54,6 +56,8 @@ HEADERS += \
     enfant.h \
     fiche_animal.h \
     fourniture.h \
+    ingr.h \
+    ingredient.h \
     login.h \
     mainwindow.h \
     medicament.h \

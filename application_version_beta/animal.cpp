@@ -16,10 +16,6 @@
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QTextDocument>
-
-#include <QPrinter>
-#include <QPrintDialog>
-#include <QTextDocument>
 Animal::Animal(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Animal)
@@ -294,50 +290,50 @@ void Animal::on_Afficher_Fiche_clicked()
 void Animal::on_pushButton_im_clicked()
 {
     QString strStream;
-               QTextStream out(&strStream);
+            QTextStream out(&strStream);
 
 
 
-               const int rowCount = ui->tableView_2->model()->rowCount();
-               const int columnCount = ui->tableView_2->model()->columnCount();
+            const int rowCount = ui->tableView->model()->rowCount();
+            const int columnCount = ui->tableView->model()->columnCount();
 
-               out <<  "<html>\n"
-                   "<head>\n"
+            out <<  "<html>\n"
+                "<head>\n"
 
-                   "<meta Content=\"Text/html; charset=Windows-1251\">\n"
-                   <<  QString("<title>%60 les postes</title>\n").arg("poste")
-                   <<  "</head>\n"
-                   "<body bgcolor=#ffffff link=#5000A0>\n"
-                   "<table border=1 cellspacing=0 cellpadding=2>\n";
-               out << "<thead><tr bgcolor=#f0f0f0>";
-               for (int column = 0; column < columnCount; column++)
-                   if (! ui->tableView_2->isColumnHidden(column))
-                       out << QString("<th>%1</th>").arg(ui->tableView_2->model()->headerData(column, Qt::Horizontal).toString());
-               out << "</tr></thead>\n";
+                "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                <<  QString("<title>%60 les postes</title>\n").arg("poste")
+                <<  "</head>\n"
+                "<body bgcolor=#ffffff link=#5000A0>\n"
+                "<table border=1 cellspacing=0 cellpadding=2>\n";
+            out << "<thead><tr bgcolor=#f0f0f0>";
+            for (int column = 0; column < columnCount; column++)
+                if (! ui->tableView->isColumnHidden(column))
+                    out << QString("<th>%1</th>").arg(ui->tableView->model()->headerData(column, Qt::Horizontal).toString());
+            out << "</tr></thead>\n";
 
-               for (int row = 0; row < rowCount; row++) {
-                   out << "<tr>";
-                   for (int column = 0; column < columnCount; column++) {
-                       if (!ui->tableView_2->isColumnHidden(column)) {
-                           QString data = ui->tableView_2->model()->data(ui->tableView_2->model()->index(row, column)).toString().simplified();
-                           out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
-                       }
-                   }
-                   out << "</tr>\n";
-               }
-               out <<  "</table>\n"
-                   "</body>\n"
-                   "</html>\n";
+            for (int row = 0; row < rowCount; row++) {
+                out << "<tr>";
+                for (int column = 0; column < columnCount; column++) {
+                    if (!ui->tableView->isColumnHidden(column)) {
+                        QString data = ui->tableView->model()->data(ui->tableView->model()->index(row, column)).toString().simplified();
+                        out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                    }
+                }
+                out << "</tr>\n";
+            }
+            out <<  "</table>\n"
+                "</body>\n"
+                "</html>\n";
 
-               QTextDocument *document = new QTextDocument();
-               document->setHtml(strStream);
+            QTextDocument *document = new QTextDocument();
+            document->setHtml(strStream);
 
-               QPrinter printer;
+            QPrinter printer;
 
-               QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
-               if (dialog->exec() == QDialog::Accepted) {
-                   document->print(&printer);
-               }
+            QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+            if (dialog->exec() == QDialog::Accepted) {
+                document->print(&printer);
+            }
 
-               delete document;
+            delete document;
 }

@@ -38,6 +38,8 @@ Contact::Contact(QWidget *parent) :
     int w2=ui->label_pic_1->width();
     int h2=ui->label_pic_1->height();
     ui->label_pic_1->setPixmap(pix2.scaled(w2,h2,Qt::KeepAspectRatio));
+    ui->tableView_aff->setModel(P.afficher_pres());
+    ui->tableView_aff_2->setModel(e.afficher());
 }
 
 Contact::~Contact()

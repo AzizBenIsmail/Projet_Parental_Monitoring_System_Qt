@@ -318,7 +318,7 @@ font: 87 9pt &quot;Arial Black&quot;;
         <x>510</x>
         <y>400</y>
         <width>351</width>
-        <height>171</height>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -641,6 +641,36 @@ QPushButton::pressed{background-color:lime;}
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>400</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+    background-color: lightgrey;
+    color: rgb(0, 0, 0);
+    border: rgba(0, 0, 0, .175)solid 3px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 10px inset whitesmoke;
+    padding:inherit; 
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-align: center ;
+    line-height: 5ex;   }
+QPushButton::hover{background-color:pink;}
+QPushButton::pressed{background-color:lime;}</string>
+      </property>
+      <property name="text">
+       <string>Naviguez en pleine liberté</string>
+      </property>
+     </widget>
      <zorder>groupBox_8</zorder>
      <zorder>groupBox_7</zorder>
      <zorder>groupBox_6</zorder>
@@ -648,6 +678,7 @@ QPushButton::pressed{background-color:lime;}
      <zorder>label_animal</zorder>
      <zorder>label_p_3</zorder>
      <zorder>groupBox_9</zorder>
+     <zorder>pushButton</zorder>
     </widget>
     <widget class="QWidget" name="a">
      <attribute name="title">

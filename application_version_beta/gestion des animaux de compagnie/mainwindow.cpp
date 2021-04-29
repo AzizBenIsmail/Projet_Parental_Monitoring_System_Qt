@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include "animal.h"
 #include "Fiche_animal.h"
-#include<iostream>
+#include <iostream>
 #include <QMessageBox>
 #include <QPainter>
 #include <QPrinter>
@@ -11,6 +11,8 @@
 #include <QTextDocument>
 #include <QSqlRecord>
 #include <QDebug>
+#include <QDesktopServices>
+#include <QUrl>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -481,3 +483,9 @@ html += "<tr > <td>"+id+"</td> <td>"+poid+"</td> <td>"+taille+"</td><td>"+NBR_CO
 
 
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    QString link="https://www.google.com";
+    QDesktopServices::openUrl(QUrl (link)) ;
+}

@@ -20,6 +20,24 @@ Menu::Menu(QWidget *parent) :
     ui(new Ui::Menu)
 {
     ui->setupUi(this);
+    QPixmap pix8("C:/Users/ASUS/Desktop/Nouveau dossier/application_version_beta/azaz.png");
+     int w8=ui->azerty->width();
+     int h8=ui->azerty->height();
+     ui->azerty->setPixmap(pix8.scaled(w8,h8,Qt::KeepAspectRatio));
+    animation = new QPropertyAnimation(ui->azerty, "geometry");
+    animation->setDuration(20000);
+    animation->setStartValue(ui->azerty->geometry());
+    animation->setEndValue(QRect(500,500,600,500));
+    animation->start();
+    QPixmap pixe("C:/Users/ASUS/Desktop/Nouveau dossier/application_version_beta/ase.png");
+     int we=ui->eeee->width();
+     int he=ui->eeee->height();
+     ui->eeee->setPixmap(pixe.scaled(we,he,Qt::KeepAspectRatio));
+    animation = new QPropertyAnimation(ui->eeee, "geometry");
+    animation->setDuration(15000);
+    animation->setStartValue(ui->eeee->geometry());
+    animation->setEndValue(QRect(150,150,900,200));
+    animation->start();
    QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/9.jpg");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();

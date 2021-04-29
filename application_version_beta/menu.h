@@ -4,6 +4,7 @@
 #include "QString"
 #include <QDialog>
 #include "admin.h"
+#include<QPropertyAnimation>
 #include "arduino.h"
 namespace Ui {
 class Menu;
@@ -75,7 +76,7 @@ private:
     Ui::Menu *ui;
 
     QByteArray data; // variable contenant les données reçues
-
+    QPropertyAnimation *animation;
     Arduino A; // objet temporaire
 };
 

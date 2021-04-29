@@ -3162,6 +3162,32 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     </property>
    </widget>
   </widget>
+  <widget class="QLabel" name="azerty">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>640</y>
+     <width>291</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="eeee">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>361</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>label_ph</zorder>
   <zorder>pushButton_Contact</zorder>
   <zorder>pushButton_Sante</zorder>
@@ -3174,6 +3200,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
   <zorder>pushButton_a_2</zorder>
   <zorder>pushButton_cui</zorder>
   <zorder>groupBox</zorder>
+  <zorder>azerty</zorder>
+  <zorder>eeee</zorder>
  </widget>
  <resources/>
  <connections/>

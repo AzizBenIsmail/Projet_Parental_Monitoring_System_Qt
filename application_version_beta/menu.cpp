@@ -20,7 +20,7 @@ Menu::Menu(QWidget *parent) :
     ui(new Ui::Menu)
 {
     ui->setupUi(this);
-    QPixmap pix8("C:/Users/ASUS/Desktop/Nouveau dossier/application_version_beta/azaz.png");
+    QPixmap pix8("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/azaz.png");
      int w8=ui->azerty->width();
      int h8=ui->azerty->height();
      ui->azerty->setPixmap(pix8.scaled(w8,h8,Qt::KeepAspectRatio));
@@ -29,7 +29,7 @@ Menu::Menu(QWidget *parent) :
     animation->setStartValue(ui->azerty->geometry());
     animation->setEndValue(QRect(500,500,600,500));
     animation->start();
-    QPixmap pixe("C:/Users/ASUS/Desktop/Nouveau dossier/application_version_beta/ase.png");
+    QPixmap pixe("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/ase.png");
      int we=ui->eeee->width();
      int he=ui->eeee->height();
      ui->eeee->setPixmap(pixe.scaled(we,he,Qt::KeepAspectRatio));

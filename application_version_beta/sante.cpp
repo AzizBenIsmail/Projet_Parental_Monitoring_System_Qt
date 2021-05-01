@@ -40,7 +40,7 @@
 #include <QDateTime>
 #include <QPrinter>
 #include <QPrintDialog>
-
+#include "notification.h"
 
 #include <QSqlQuery>
 #include <QMessageBox>
@@ -232,7 +232,10 @@ void Sante::on_pushButton_ajout_clicked()
                                              QObject::tr("ajout successful.\n"
                                                          "Click Cancel to exit."), QMessageBox::Cancel);
                   ui->tableView_aff->setModel(E.afficher());
+                  QString okd="";
 
+                  notification ok;
+                    ok.notification_ajout(okd);
                          }
                              else
                                  QMessageBox::critical(nullptr, QObject::tr("Ajout errer"),

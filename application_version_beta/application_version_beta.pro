@@ -37,6 +37,7 @@ SOURCES += \
     medicament.cpp \
     menu.cpp \
     note.cpp \
+    notification.cpp \
     prestataire.cpp \
     programme.cpp \
     sante.cpp \
@@ -66,6 +67,7 @@ HEADERS += \
     medicament.h \
     menu.h \
     note.h \
+    notification.h \
     prestataire.h \
     programme.h \
     sante.h \

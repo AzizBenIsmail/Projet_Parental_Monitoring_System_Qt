@@ -5,7 +5,7 @@
 #include "QString"
 #include <QMessageBox>
 #include "boutique.h"
-
+#include "mailing.h"
 #include "boutique.h"
 #include "vetement.h"
 #include<iostream>
@@ -390,4 +390,10 @@ void Securite::on_findv_textChanged(const QString &arg1)
                             QObject::tr("NO MATCH FOUND !.\n"
                                         "Click Cancel to exit."), QMessageBox::Cancel);
             ui->findv->clear();}
+}
+
+void Securite::on_pushButton_4_clicked()
+{
+    Mailing M;
+    M.exec();
 }

@@ -396,3 +396,19 @@ void programme::on_Modifier_a_clicked()
                                        QObject::tr("modify failed.\n"
                                                    "Click Cancel to exit."), QMessageBox::Cancel);
 }
+
+void programme::on_pushB_clicked()
+{
+    bool t;
+    t=a.reset();
+    if(t)
+     {    QMessageBox::information(nullptr, QObject::tr("supp avec succes"),
+                                   QObject::tr("sup successful.\n"
+                                               "Click Cancel to exit."), QMessageBox::Cancel);
+ui->tableView_aff_ha->setModel(a.afficher());
+               }
+                   else
+                       QMessageBox::critical(nullptr, QObject::tr("sup errer"),
+                                   QObject::tr("sup failed.\n"
+                                               "Click Cancel to exit."), QMessageBox::Cancel);
+}

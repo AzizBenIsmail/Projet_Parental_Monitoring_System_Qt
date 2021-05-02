@@ -103,6 +103,8 @@ private slots:
 
     void on_reload_stat_clicked();
 
+    void on_pushButton_4_clicked();
+
 private:
     Ui::Sante *ui;
     suivi e;

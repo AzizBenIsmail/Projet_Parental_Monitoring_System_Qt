@@ -55,10 +55,10 @@ QSqlQueryModel *Activite::afficher()
   QSqlQueryModel *model=new QSqlQueryModel();
         model->setQuery("SELECT * FROM Activite ");
         model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifain"));
-        model->setHeaderData(1, Qt::Horizontal, QObject::tr("duree"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom_Activite"));
-        model->setHeaderData(3, Qt::Horizontal, QObject::tr("type"));
-        model->setHeaderData(4, Qt::Horizontal, QObject::tr("date"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom_Activite"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("date"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("duree"));
+        model->setHeaderData(4, Qt::Horizontal, QObject::tr("type"));
         return model;
 }
 bool Activite::Supprime(int id)
@@ -86,4 +86,11 @@ query.bindValue(":id",id);
 
     query.bindValue(":date", date /*date_string*/);
 return    query.exec();
+}
+bool Activite::reset()
+{
+   QSqlQuery query;
+        query.prepare("delete Activite ");
+        query.bindValue(0, id);
+     return query.exec();
 }

@@ -53,6 +53,8 @@ private slots:
 
     void on_Modifier_a_clicked();
 
+    void on_pushB_clicked();
+
 private:
     Ui::programme *ui;
     Fourniture f;

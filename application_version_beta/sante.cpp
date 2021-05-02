@@ -10,6 +10,7 @@
 #include <QPrintDialog>
 #include <QtPrintSupport/QPrinter>
 
+#include "mailing.h"
 
 
 #include <QSqlQuery>
@@ -402,7 +403,6 @@ void Sante::on_Tri_Poid_clicked()
 void Sante::on_pushButton_2_clicked()
 {
     ui->tableView_aff->setModel(e.test());
-
 }
 
 
@@ -762,4 +762,10 @@ void Sante::on_reload_stat_clicked()
     chart->removeAllSeries();
      chart->addSeries(series2);
      chartView->update();
+}
+
+void Sante::on_pushButton_4_clicked()
+{
+    Mailing M;
+    M.exec();
 }

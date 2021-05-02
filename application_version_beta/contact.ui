@@ -112,7 +112,7 @@ QPushButton::hover
 }</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -5728,24 +5728,11 @@ QLineEdit::focus{  color: black ;
 background-color:white;}</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_pic_4">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>10</y>
-        <width>1231</width>
-        <height>761</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
     </widget>
     <widget class="QLabel" name="label_pic_1">
      <property name="geometry">
       <rect>
-       <x>-90</x>
+       <x>-100</x>
        <y>-100</y>
        <width>1231</width>
        <height>761</height>
@@ -5755,6 +5742,20 @@ background-color:white;}</string>
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="label_pic_4">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>10</y>
+       <width>1231</width>
+       <height>761</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label_pic_4</zorder>
     <zorder>label_pic_1</zorder>
     <zorder>groupBox_3</zorder>
     <zorder>groupBox_2</zorder>

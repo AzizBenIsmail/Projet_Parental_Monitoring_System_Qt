@@ -54,6 +54,8 @@ private slots:
 
     void on_findv_textChanged(const QString &arg1);
 
+    void on_pushButton_4_clicked();
+
 private:
     Ui::Securite *ui;
     boutique B;

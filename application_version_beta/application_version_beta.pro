@@ -1,6 +1,6 @@
 QT       += core gui sql multimedia printsupport charts network serialport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+QT       += core gui network
 CONFIG += c++11
 
 # The following define makes your compiler emit warnings if you use
@@ -32,6 +32,7 @@ SOURCES += \
     ingr.cpp \
     ingredient.cpp \
     login.cpp \
+    mailing.cpp \
     main.cpp \
     mainwindow.cpp \
     medicament.cpp \
@@ -63,6 +64,7 @@ HEADERS += \
     ingr.h \
     ingredient.h \
     login.h \
+    mailing.h \
     mainwindow.h \
     medicament.h \
     menu.h \
@@ -82,6 +84,7 @@ FORMS += \
     contact.ui \
     cuisine.ui \
     login.ui \
+    mailing.ui \
     mainwindow.ui \
     menu.ui \
     note.ui \

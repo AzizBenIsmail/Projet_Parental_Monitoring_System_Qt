@@ -39,10 +39,12 @@ SOURCES += \
     menu.cpp \
     note.cpp \
     notification.cpp \
+    pinter.cpp \
     prestataire.cpp \
     programme.cpp \
     sante.cpp \
     securite.cpp \
+    statistics.cpp \
     suivi.cpp \
     vetement.cpp
 
@@ -70,10 +72,12 @@ HEADERS += \
     menu.h \
     note.h \
     notification.h \
+    pinter.h \
     prestataire.h \
     programme.h \
     sante.h \
     securite.h \
+    statistics.h \
     suivi.h \
     vetement.h
 FORMS += \
@@ -88,9 +92,11 @@ FORMS += \
     mainwindow.ui \
     menu.ui \
     note.ui \
+    pinter.ui \
     programme.ui \
     sante.ui \
-    securite.ui
+    securite.ui \
+    statistics.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

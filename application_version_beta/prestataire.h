@@ -42,6 +42,10 @@ public:
     bool reset_pres();
        void rechercher(QTableView *table,QString cas );
     QSqlQueryModel* test();
+    int total_specialitepres();
+    int total_femme_de_menage();
+    int total_jardinier();
+    int total_enseignant();
 private:
  int idpres,salairepres,nbr_heurespres,telpres;
  QString nompres,prenompres,specialitepres,dateembauchepres,adressepres,sexepres;

@@ -21,6 +21,17 @@
 #include <QTextDocument>
 #include <QSqlQuery>
 #include <QSqlError>
+
+#include <QPdfWriter>
+#include <QDesktopServices>
+#include <QUrl>
+#include "statistics.h"
+#include <QPaintEvent>
+#include <QPainter>
+#include <QImage>
+#include <QMouseEvent>
+#include <QDesktopWidget>
+#include "pinter.h"
 Contact::Contact(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Contact)
@@ -603,3 +614,15 @@ void Contact::on_lineEdit_SP_textChanged(const QString &arg1)
 }
 
 
+
+void Contact::on_pushButton_16_clicked()
+{
+    statistics *g = new statistics(this);
+    g->show();
+}
+
+void Contact::on_pushButton_18_clicked()
+{
+    pinter *o = new pinter(this);
+    o->show();
+}

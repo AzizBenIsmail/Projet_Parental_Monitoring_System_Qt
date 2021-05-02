@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pinter</class>
+ <widget class="QMainWindow" name="pinter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>528</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menustyle">
+    <property name="title">
+     <string>style</string>
+    </property>
+    <addaction name="actiontaille"/>
+    <addaction name="actioncolour"/>
+   </widget>
+   <widget class="QMenu" name="menud_poser">
+    <property name="title">
+     <string>déposer</string>
+    </property>
+    <addaction name="actionsupprimer"/>
+   </widget>
+   <addaction name="menustyle"/>
+   <addaction name="menud_poser"/>
+  </widget>
+  <action name="actiontaille">
+   <property name="text">
+    <string>taille</string>
+   </property>
+  </action>
+  <action name="actioncolour">
+   <property name="text">
+    <string>colour</string>
+   </property>
+  </action>
+  <action name="actionsupprimer">
+   <property name="text">
+    <string>supprimer</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

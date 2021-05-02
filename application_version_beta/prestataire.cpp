@@ -238,3 +238,55 @@ void prestataire ::rechercher(QTableView *table,QString cas )
       table->setModel(model);
       table->show();
 }
+int prestataire::total_specialitepres()
+{
+     QSqlQuery query;
+     query.prepare("SELECT COUNT(*) FROM prestataire");
+
+      query.exec();
+      int rows = 0;
+      while(query.next()) {
+          rows = query.value(0).toInt();
+      }
+
+      return rows ;
+ }
+ int prestataire:: total_femme_de_menage()
+{
+QSqlQuery query;
+query.prepare("SELECT COUNT(*) FROM prestataire");
+
+ query.exec();
+ int rows = 0;
+ while(query.next()) {
+     rows = query.value(0).toInt();
+ }
+
+ return rows ;
+}
+int prestataire:: total_jardinier()
+{
+QSqlQuery query;
+query.prepare("SELECT COUNT(*) FROM prestataire");
+
+ query.exec();
+ int rows = 0;
+ while(query.next()) {
+     rows = query.value(0).toInt();
+ }
+
+ return rows ;
+}
+int prestataire:: total_enseignant()
+{
+QSqlQuery query;
+query.prepare("SELECT COUNT(*) FROM prestataire");
+
+ query.exec();
+ int rows = 0;
+ while(query.next()) {
+     rows = query.value(0).toInt();
+ }
+
+ return rows ;
+}

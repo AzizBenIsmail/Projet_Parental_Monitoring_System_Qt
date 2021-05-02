@@ -4,7 +4,7 @@
 #include "prestataire.h"
 #include "enfant.h"
 #include <QDialog>
-
+#include "pinter.h"
 
 namespace Ui {
 class Contact;
@@ -60,6 +60,10 @@ private slots:
     void on_lineEdit_SP_textChanged(const QString &arg1);
 
     void on_tableView_aff_activated(const QModelIndex &index);
+
+    void on_pushButton_16_clicked();
+
+    void on_pushButton_18_clicked();
 
 private:
     Ui::Contact *ui;

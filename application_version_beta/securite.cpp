@@ -58,7 +58,57 @@ Securite::Securite(QWidget *parent) :
     ui->label_p->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
     ui->afficheb->setModel(B.afficher());
     ui->affichev->setModel(V.afficher());
+    /*ref&taille&prix pattern*/
+        ui->ref->setValidator(new QIntValidator(0,9999,this));
+        QRegularExpression rx2("\\b[0-9]{6}\\b",
+        QRegularExpression::CaseInsensitiveOption);
+        ui->prix->setValidator(new QRegularExpressionValidator(rx2, this));
+        QRegularExpression rx3("\\b[A-Z0-9]{1,5}\\b",
+        QRegularExpression::CaseInsensitiveOption);
+        ui->taille->setValidator(new QRegularExpressionValidator(rx3, this));
+                                 /*maxlenght*/
+                        ui->saison->setMaxLength(15);
+                        ui->genre->setMaxLength(12);
+                        ui->type->setMaxLength(25);
+                        ui->marque->setMaxLength(50);
 
+                        /*placeholder*/
+         ui->ref->setPlaceholderText("Reference");
+         ui->saison->setPlaceholderText("Saison");
+         ui->genre->setPlaceholderText("Genre");
+         ui->type->setPlaceholderText("Type de Vetement");
+         ui->taille->setPlaceholderText("Taille");
+         ui->marque->setPlaceholderText("Marque");
+         ui->prix->setPlaceholderText("Prix");
+         ui->nomsuppv->setPlaceholderText("Ref :");
+         ui->refmodif->setPlaceholderText("Ref :");
+         ui->findv->setPlaceholderText("Chercher celon :");
+
+
+                         /*tel&id pattern*/
+        ui->id->setValidator(new QIntValidator(0,999,this));
+        QRegularExpression rx1("\\b[0-9]{8}\\b",
+        QRegularExpression::CaseInsensitiveOption);
+        ui->tel->setValidator(new QRegularExpressionValidator(rx1, this));
+
+
+                        /*email pattern*/
+        QRegularExpression rx("\\b[A-Z0-9._%+-]+@[A-Z.-]+\\.[A-Z]{2,4}\\b",
+        QRegularExpression::CaseInsensitiveOption);
+        ui->mail->setValidator(new QRegularExpressionValidator(rx, this));
+                          /*maxlenght*/
+                   ui->nom->setMaxLength(20);
+                   ui->adr->setMaxLength(50);
+                   ui->mail->setMaxLength(50);
+                      /*placeholder*/
+       ui->id->setPlaceholderText("Id Boutique");
+       ui->nom->setPlaceholderText("Nom Complet");
+       ui->adr->setPlaceholderText("Adresse Local");
+       ui->tel->setPlaceholderText("N° Telephone");
+       ui->mail->setPlaceholderText("Contact@mail.com");
+       ui->nomsupp->setPlaceholderText("Id :");
+       ui->idmodif->setPlaceholderText("Id :");
+     //  ui->mailing->setPlaceholderText("Mettre Votre E-mail içi :");
 }
 
 Securite::~Securite()
@@ -396,4 +446,56 @@ void Securite::on_pushButton_4_clicked()
 {
     Mailing M;
     M.exec();
+}
+
+void Securite::on_idmodif_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM BOUTIQUE WHERE ID  LIKE'"+arg1+"%'");
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         }
+}
+
+void Securite::on_nomsupp_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM BOUTIQUE WHERE ID  LIKE'"+arg1+"%'");
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         }
+}
+
+void Securite::on_refmodif_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM vetement WHERE ref  LIKE'"+arg1+"%'");
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         }
+}
+
+void Securite::on_nomsuppv_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM vetement WHERE ref  LIKE'"+arg1+"%'");
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         }
 }

@@ -56,6 +56,14 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_idmodif_textChanged(const QString &arg1);
+
+    void on_nomsupp_textChanged(const QString &arg1);
+
+    void on_refmodif_textChanged(const QString &arg1);
+
+    void on_nomsuppv_textChanged(const QString &arg1);
+
 private:
     Ui::Securite *ui;
     boutique B;

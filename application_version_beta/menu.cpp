@@ -159,8 +159,7 @@ void Menu::update_label()
     // alors afficher ON
 
 }else
-
-        ui->label_5->setText("Normal");   // si les données reçues de arduino via la liaison série sont égales à 0
+  ui->label_5->setText("Normal");   // si les données reçues de arduino via la liaison série sont égales à 0
      //alors afficher ON
 }
 

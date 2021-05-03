@@ -412,3 +412,68 @@ ui->tableView_aff_ha->setModel(a.afficher());
                                    QObject::tr("sup failed.\n"
                                                "Click Cancel to exit."), QMessageBox::Cancel);
 }
+
+void programme::on_lineEdit_idS_ha_textChanged(const QString &arg1)
+{
+    QSqlQuery   *query= new QSqlQuery();
+    query->prepare("SELECT * FROM Activite WHERE ID  LIKE'"+arg1+"%'" );
+     query->exec();
+     if (query->next()) { }
+     else {
+         QMessageBox::critical(nullptr, QObject::tr("SEARCH"),
+                         QObject::tr("NO MATCH FOUND !.\n"
+                                     "Click Cancel to exit."), QMessageBox::Cancel);
+         ui->lineEdit_idS_h->clear();}
+}
+
+void programme::on_pushButton_2_clicked()
+{
+
+    QString strStream;
+            QTextStream out(&strStream);
+
+
+
+            const int rowCount = ui->tableView_aff_ha->model()->rowCount();
+            const int columnCount = ui->tableView_aff_ha->model()->columnCount();
+
+            out <<  "<html>\n"
+                "<head>\n"
+
+                "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                <<  QString("<title>%60 les postes</title>\n").arg("poste")
+                <<  "</head>\n"
+                "<body bgcolor=#ffffff link=#5000A0>\n"
+                "<table border=1 cellspacing=0 cellpadding=2>\n";
+            out << "<thead><tr bgcolor=#f0f0f0>";
+            for (int column = 0; column < columnCount; column++)
+                if (! ui->tableView_aff_ha->isColumnHidden(column))
+                    out << QString("<th>%1</th>").arg(ui->tableView_aff_ha->model()->headerData(column, Qt::Horizontal).toString());
+            out << "</tr></thead>\n";
+
+            for (int row = 0; row < rowCount; row++) {
+                out << "<tr>";
+                for (int column = 0; column < columnCount; column++) {
+                    if (!ui->tableView_aff_ha->isColumnHidden(column)) {
+                        QString data = ui->tableView_aff_ha->model()->data(ui->tableView_aff_ha->model()->index(row, column)).toString().simplified();
+                        out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                    }
+                }
+                out << "</tr>\n";
+            }
+            out <<  "</table>\n"
+                "</body>\n"
+                "</html>\n";
+
+            QTextDocument *document = new QTextDocument();
+            document->setHtml(strStream);
+
+            QPrinter printer;
+
+            QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+            if (dialog->exec() == QDialog::Accepted) {
+                document->print(&printer);
+            }
+
+            delete document;
+}

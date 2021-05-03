@@ -21,9 +21,6 @@ pinMode(Buzzer,OUTPUT);
   x=0; // Intialiser l'intensité de la deuxième lampe 
 
 }
-
-
-
 void loop() {
     digitalWrite(led,HIGH);
   delay(150);

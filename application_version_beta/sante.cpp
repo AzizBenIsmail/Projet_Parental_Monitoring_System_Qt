@@ -795,7 +795,7 @@ void Sante::on_pushButton_4_clicked()
 
 void Sante::on_pushButton_5_clicked()
 {
-    {QTableView *table;
+  QTableView *table;
         table = ui->tableView_aff_m;
 
            QString filters("CSV files (.csv);;All files (.*)");
@@ -830,4 +830,10 @@ void Sante::on_pushButton_5_clicked()
                QMessageBox::information(this,"Exporter To Excel","Exporter En Excel Avec Succées ");
            }
 }
+
+
+void Sante::on_pushButton_7_clicked()
+{
+    QString link="https://www.worldometers.info/coronavirus/";
+    QDesktopServices::openUrl(QUrl (link)) ;
 }

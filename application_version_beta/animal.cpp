@@ -110,7 +110,7 @@ void Animal::on_Ajouter_FICHE_clicked()
      else if (nbr==0  )
      {
          QMessageBox::critical(nullptr, QObject::tr("problem nbr"),
-                     QObject::tr("verifier nom\n"
+                     QObject::tr("verifier consu\n"
                                  "Click Cancel to exit."), QMessageBox::Cancel);
 
      }
@@ -173,34 +173,63 @@ void Animal::on_Supprimer_fiche_clicked()
 
 void Animal::on_PDF_clicked()
 {
-    QSqlQueryModel model;
-       model.setQuery("SELECT * FROM FICHE_ANIMAL");
 
-        QString html = "<table  border='2'> <thead> <tr> <th>#</th> <th>Poid</th> <th>Taille</th> <th>NBR consultation</th> <th> ID Animal</th> <th> Date Vacc</th> <th> Etat</th><th> Nom Maladie </th>  </tr> </thead><tbody > ";
+    QString strStream;
+    QTextStream out(&strStream);
 
+    const int rowCount = ui->tableView_2->model()->rowCount();
+    const int columnCount = ui->tableView_2->model()->columnCount();
 
-       for (int i = 0; i < model.rowCount(); ++i) {
+    out <<  "<html>\n"
+        "<head>\n"
+        "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+        <<  QString("<title>%1</title>\n").arg("strTitle")
+        <<  "</head>\n"
+        "<body bgcolor=#ffffff link=#5000A0>\n"
 
-           QString id = model.record(i).value("ID").toString();
-                    QString poid = model.record(i).value("POID").toString();
-                             QString taille = model.record(i).value("TAILLE").toString();
-                              QString NBR_CONSULTATION = model.record(i).value("NBR_CONSULTATION").toString();
-                                QString ID_ANNIMAL = model.record(i).value("ID_ANNIMAL").toString();
-                                  QString DATE_VACC = model.record(i).value("DATE_VACC").toString();
-                                          QString ETAT = model.record(i).value("ETAT").toString();
-           QString name = model.record(i).value("NOM_MALADE").toString();
-html += "<tr > <td>"+id+"</td> <td>"+poid+"</td> <td>"+taille+"</td><td>"+NBR_CONSULTATION+"</td><td>"+DATE_VACC+"</td><td>"+DATE_VACC+"</td><td>"+ETAT+"</td> <td>"+name+"</td></tr>";
-       }
-    html+="</tbody></table>";
+        //     "<align='right'> " << datefich << "</align>"
+        "<center> <H1>Liste Des suivi </H1></br></br><table border=1 cellspacing=0 cellpadding=2>\n";
 
-      QTextDocument document;
-      document.setHtml(html);
+    // headers
+    out << "<thead><tr bgcolor=#f0f0f0> <th>Numero</th>";
+    for (int column = 0; column < columnCount; column++)
+        if (!ui->tableView_2->isColumnHidden(column))
+            out << QString("<th>%1</th>").arg(ui->tableView_2->model()->headerData(column, Qt::Horizontal).toString());
+    out << "</tr></thead>\n";
 
-      QPrinter printer(QPrinter::PrinterResolution);
-      printer.setOutputFormat(QPrinter::PdfFormat);
-      printer.setOutputFileName("Fiche.pdf");
+    // data table
+    for (int row = 0; row < rowCount; row++)
+    {
+        out << "<tr> <td bkcolor=0>" << row + 1 << "</td>";
+        for (int column = 0; column < columnCount; column++)
+        {
+            if (!ui->tableView_2->isColumnHidden(column))
+            {
+                QString data = ui->tableView_2->model()->data(ui->tableView_2->model()->index(row, column)).toString().simplified();
+                out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+            }
+        }
+        out << "</tr>\n";
+    }
+    out <<  "</table> </center>\n"
+        "</body>\n"
+        "</html>\n";
 
-      document.print(&printer);
+    QString fileName = QFileDialog::getSaveFileName((QWidget * )0, "Sauvegarder en PDF", QString(), "*.pdf");
+    if (QFileInfo(fileName).suffix().isEmpty())
+    {
+        fileName.append(".pdf");
+    }
+
+    QPrinter printer (QPrinter::PrinterResolution);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setPaperSize(QPrinter::A4);
+    printer.setOutputFileName(fileName);
+
+    QTextDocument doc;
+    doc.setHtml(strStream);
+    doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+    doc.print(&printer);
 }
 
 void Animal::on_Supprimer_clicked()

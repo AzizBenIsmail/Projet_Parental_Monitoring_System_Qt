@@ -991,7 +991,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>100</y>
+     <y>110</y>
      <width>1011</width>
      <height>601</height>
     </rect>
@@ -12430,8 +12430,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>820</x>
-       <y>100</y>
+       <x>870</x>
+       <y>70</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -12904,10 +12904,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>100</y>
-       <width>101</width>
-       <height>23</height>
+       <x>370</x>
+       <y>70</y>
+       <width>111</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -13375,6 +13375,36 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <string>excel</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>70</y>
+       <width>301</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+    background-color: lightgrey;
+    color: rgb(0, 0, 0);
+    border: rgba(0, 0, 0, .175)solid 3px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 10px inset whitesmoke;
+    padding:inherit; 
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-align: center ;
+    line-height: 5ex;   }
+QPushButton::hover{background-color:pink;}
+QPushButton::pressed{background-color:lime;}</string>
+     </property>
+     <property name="text">
+      <string>Coronavirus disease (COVID-19)</string>
+     </property>
+    </widget>
     <zorder>label_ph_2</zorder>
     <zorder>groupBox_3</zorder>
     <zorder>groupBox_6</zorder>
@@ -13385,6 +13415,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <zorder>pushButton_Actualise_m</zorder>
     <zorder>pushButton_4</zorder>
     <zorder>pushButton_5</zorder>
+    <zorder>pushButton_7</zorder>
    </widget>
   </widget>
   <zorder>label_ph</zorder>

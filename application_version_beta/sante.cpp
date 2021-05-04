@@ -125,6 +125,25 @@ Sante::Sante(QWidget *parent) :
          chart->legend()->setAlignment(Qt::AlignBottom);
 
 
+
+         ui->_id_m->setPlaceholderText("ID");
+         ui->Prix->setPlaceholderText("Quantité");
+         ui->_Quantite->setPlaceholderText("Prix");
+         ui->lineEdit_idS_m->setPlaceholderText("ID :");
+         ui->_id_m_2->setPlaceholderText("ID :");
+
+
+         ui->_id_ajouter->setPlaceholderText("ID");
+         ui->_taille->setPlaceholderText("Taille");
+         ui->_poid->setPlaceholderText("Poids");
+         ui->_tenstion->setPlaceholderText("Tension");
+         ui->Psearch_5->setPlaceholderText("Chercher");
+         ui->id_modify->setPlaceholderText("ID :");
+         ui->lineEdit_idS->setPlaceholderText("ID :");
+
+
+
+
 }
 Sante::~Sante()
 {

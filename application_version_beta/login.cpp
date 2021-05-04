@@ -12,6 +12,9 @@ Login::Login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Login)
 {
+
+
+
     ui->setupUi(this);
     QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/avatar.png");
     int w=ui->label_ph->width();
@@ -24,6 +27,10 @@ Login::Login(QWidget *parent) :
     QTimer *timer=new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(showTime()));
     timer->start();
+    ui->lineEdit_login->setPlaceholderText("AdresseMail@Contact.com");
+    ui->lineEdit_password->setPlaceholderText("Password ");
+
+
 }
 void Login::showTime()
 {
@@ -38,6 +45,7 @@ void Login::showTime()
 Login::~Login()
 {
     delete ui;
+
 }
 
 void Login::on_pushButton_Q_clicked()

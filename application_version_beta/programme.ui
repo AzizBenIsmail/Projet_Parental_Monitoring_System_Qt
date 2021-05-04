@@ -4105,9 +4105,9 @@ background-color:white;}</string>
      <widget class="QLineEdit" name="_id_h_2">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>280</x>
         <y>40</y>
-        <width>31</width>
+        <width>61</width>
         <height>21</height>
        </rect>
       </property>

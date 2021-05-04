@@ -47,6 +47,40 @@
 #include<QVariant>
 #include <QDateTime>
 
+#include "contact.h"
+#include "ui_contact.h"
+#include "menu.h"
+#include <QPixmap>
+#include <QMessageBox>
+#include <QIntValidator>
+#include <QSqlQueryModel>
+#include "prestataire.h"
+#include "enfant.h"
+#include <QPainter>
+#include <QPrinter>
+#include <QFileDialog>
+#include <QPdfWriter>
+#include <QTextDocument>
+#include <QSqlRecord>
+#include <QDate>
+#include <QPixmap>
+#include <QDialog>
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QTextDocument>
+#include <QSqlQuery>
+#include <QSqlError>
+
+#include <QPdfWriter>
+#include <QDesktopServices>
+#include <QUrl>
+#include "statistics.h"
+#include <QPaintEvent>
+#include <QPainter>
+#include <QImage>
+#include <QMouseEvent>
+#include <QDesktopWidget>
+#include "pinter.h"
 Securite::Securite(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Securite)
@@ -498,4 +532,10 @@ void Securite::on_nomsuppv_textChanged(const QString &arg1)
                          QObject::tr("NO MATCH FOUND !.\n"
                                      "Click Cancel to exit."), QMessageBox::Cancel);
          }
+}
+
+void Securite::on_pushButton_2_clicked()
+{
+    statistics *g = new statistics(this);
+    g->show();
 }

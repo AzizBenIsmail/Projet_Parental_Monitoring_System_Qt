@@ -8088,9 +8088,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QGroupBox" name="groupBox_5">
      <property name="geometry">
       <rect>
-       <x>570</x>
+       <x>900</x>
        <y>440</y>
-       <width>481</width>
+       <width>161</width>
        <height>81</height>
       </rect>
      </property>
@@ -8111,7 +8111,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>10</x>
         <y>30</y>
         <width>131</width>
         <height>31</height>
@@ -9835,6 +9835,32 @@ background-color:white;}</string>
       </property>
       <property name="text">
        <string>ID</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_14">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>430</y>
+       <width>191</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Stat</string>
+     </property>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>stat</string>
       </property>
      </widget>
     </widget>

@@ -1003,7 +1003,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <property name="documentMode">
     <bool>false</bool>
@@ -5625,10 +5625,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QLabel" name="label_ph_2">
      <property name="geometry">
       <rect>
-       <x>-50</x>
-       <y>-60</y>
-       <width>1171</width>
-       <height>691</height>
+       <x>-120</x>
+       <y>-100</y>
+       <width>1241</width>
+       <height>761</height>
       </rect>
      </property>
      <property name="text">

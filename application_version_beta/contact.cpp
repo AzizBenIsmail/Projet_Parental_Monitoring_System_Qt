@@ -37,15 +37,15 @@ Contact::Contact(QWidget *parent) :
     ui(new Ui::Contact)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/c.jpg");
+    QPixmap pix("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1235.jpg");
     int w=ui->label_p->width();
     int h=ui->label_p->height();
     ui->label_p->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
-    QPixmap pix1("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/c.jpg");
+    QPixmap pix1("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1235.jpg");
     int w1=ui->label_pic_2->width();
     int h1=ui->label_pic_2->height();
     ui->label_pic_2->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));
-    QPixmap pix2("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/c.jpg");
+    QPixmap pix2("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1235.jpg");
     int w2=ui->label_pic_1->width();
     int h2=ui->label_pic_1->height();
     ui->label_pic_1->setPixmap(pix2.scaled(w2,h2,Qt::KeepAspectRatio));

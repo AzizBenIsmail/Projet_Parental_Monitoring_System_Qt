@@ -90,6 +90,14 @@ Securite::Securite(QWidget *parent) :
     int w=ui->label_p->width();
     int h=ui->label_p->height();
     ui->label_p->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+    QPixmap pix1("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/5.jpg");
+    int w1=ui->label_p_2->width();
+    int h1=ui->label_p_2->height();
+    ui->label_p_2->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));
+    QPixmap pix2("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/5.jpg");
+    int w2=ui->label_p_3->width();
+    int h2=ui->label_p_3->height();
+    ui->label_p_3->setPixmap(pix2.scaled(w2,h2,Qt::KeepAspectRatio));
     ui->afficheb->setModel(B.afficher());
     ui->affichev->setModel(V.afficher());
     /*ref&taille&prix pattern*/
@@ -114,8 +122,8 @@ Securite::Securite(QWidget *parent) :
          ui->taille->setPlaceholderText("Taille");
          ui->marque->setPlaceholderText("Marque");
          ui->prix->setPlaceholderText("Prix");
-         ui->nomsuppv->setPlaceholderText("Ref :");
-         ui->refmodif->setPlaceholderText("Ref :");
+         //ui->nomsuppv->setPlaceholderText("Ref :");
+        // ui->refmodif->setPlaceholderText("Ref :");
          ui->findv->setPlaceholderText("Chercher celon :");
 
 

@@ -107,6 +107,8 @@ private slots:
 
     void on_lineEdit_idS_m_textEdited(const QString &arg1);
 
+    void on_pushButton_5_clicked();
+
 private:
     Ui::Sante *ui;
     suivi e;

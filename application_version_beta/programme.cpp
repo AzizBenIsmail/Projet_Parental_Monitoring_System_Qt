@@ -52,15 +52,15 @@ programme::programme(QWidget *parent) :
     ui(new Ui::programme)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1235.png");
+    QPixmap pix("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1234.jpg");
     int w=ui->label_a->width();
     int h=ui->label_a->height();
-    QPixmap pix1("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1235.png");
+    QPixmap pix1("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1234.jpg");
     int w1=ui->label_pp->width();
     int h1=ui->label_pp->height();
     ui->label_a->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
     ui->label_pp->setPixmap(pix1.scaled(w1,h1,Qt::KeepAspectRatio));
-    QPixmap pix3("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1235.png");
+    QPixmap pix3("C:/Users/ASUS/Desktop/proj-c-application/application_version_beta/1234.jpg");
     int w3=ui->label_ph_2->width();
     int h3=ui->label_ph_2->height();
    ui->label_ph_2->setPixmap(pix3.scaled(w3,h3,Qt::KeepAspectRatio));

@@ -41,6 +41,35 @@ private slots:
 
     void on_pushButton_im_clicked();
 
+    void on_pushButton_clicked();
+    //history
+
+
+
+
+    void addToHistory(QString action,QString type,QString id);
+
+    void on_pushButton_2_clicked();
+
+    QSqlQueryModel * afficherHistorique();
+    bool historyDelete();
+
+
+
+
+
+    void on_comboBox_activated(const QString &arg1);
+
+
+    //void on_comboBox_activated(const QString &arg1);
+
+
+
+
+    void on_listView_indexesMoved(const QModelIndexList &indexes);
+
+    void on_comboBox_2_activated(const QString &arg1);
+
 private:
     Ui::Animal *ui;
     Anim a;

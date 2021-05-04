@@ -49,10 +49,10 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>80</x>
      <y>110</y>
      <width>871</width>
-     <height>651</height>
+     <height>601</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -76,11 +76,11 @@ QPushButton::hover
 }</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string> Animal</string>
+     <string> Animaux de compagnie</string>
     </attribute>
     <widget class="QGroupBox" name="groupBox_9">
      <property name="geometry">
@@ -2468,6 +2468,36 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <string/>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>430</y>
+       <width>301</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+    background-color: lightgrey;
+    color: rgb(0, 0, 0);
+    border: rgba(0, 0, 0, .175)solid 3px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 10px inset whitesmoke;
+    padding:inherit; 
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-align: center ;
+    line-height: 5ex;   }
+QPushButton::hover{background-color:pink;}
+QPushButton::pressed{background-color:lime;}</string>
+     </property>
+     <property name="text">
+      <string>Naviguez en pleine liberté</string>
+     </property>
+    </widget>
     <zorder>label_ph_4</zorder>
     <zorder>groupBox_12</zorder>
     <zorder>groupBox_11</zorder>
@@ -2475,10 +2505,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <zorder>groupBox_9</zorder>
     <zorder>groupBox_13</zorder>
     <zorder>groupBox_14</zorder>
+    <zorder>pushButton</zorder>
    </widget>
    <widget class="QWidget" name="a">
     <attribute name="title">
-     <string>suivi</string>
+     <string>fiches de suivi</string>
     </attribute>
     <widget class="QGroupBox" name="groupBox">
      <property name="enabled">
@@ -5387,6 +5418,137 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <zorder>groupBox_6</zorder>
     <zorder>groupBox</zorder>
     <zorder>pushButton_im</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Historique</string>
+    </attribute>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>50</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Tout</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Historique d'ajout</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Historique de suppression</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QListView" name="listView">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>90</y>
+       <width>711</width>
+       <height>381</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>510</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <item>
+      <property name="text">
+       <string>Dernières 24 heures</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7 derniers jours</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4 dernières semaines</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Toutes les données</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>480</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>9</pointsize>
+       <weight>10</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 87 9pt &quot;Arial Black&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Periode :</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>500</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+    background-color: lightgrey;
+    color: rgb(0, 0, 0);
+    border: rgba(0, 0, 0, .175)solid 3px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 10px inset whitesmoke;
+    padding:inherit; 
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-align: center ;
+    line-height: 5ex;  
+  
+}
+QPushButton::hover{background-color:pink;}
+QPushButton::pressed{background-color:lime;}
+</string>
+     </property>
+     <property name="text">
+      <string>Supprimer</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QPushButton" name="pushButton_R">

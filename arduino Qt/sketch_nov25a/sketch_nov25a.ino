@@ -21,6 +21,9 @@ pinMode(Buzzer,OUTPUT);
   x=0; // Intialiser l'intensité de la deuxième lampe 
 
 }
+
+
+
 void loop() {
     digitalWrite(led,HIGH);
   delay(150);
@@ -29,14 +32,12 @@ void loop() {
   int Valeur=analogRead(A0);
  int Vout=Valeur*5.0/1023*1000;
  int temp=Vout/10;
-  Serial.println(temp);
-  if(temp>35)
+  //Serial.println(temp);
+  if(temp>40)
  {
   digitalWrite(ledg,LOW);
   digitalWrite(ledr,HIGH);
-  delay(90);
-  digitalWrite(ledr,LOW);
-  delay(90);
+
   Serial.write('1');
   
  }else

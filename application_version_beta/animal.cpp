@@ -16,11 +16,19 @@
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QTextDocument>
+#include <QPdfWriter>
+
+#include <QSqlRecord>
+#include <QDebug>
+#include <QDesktopServices>
+#include <QUrl>
+
 Animal::Animal(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Animal)
 {
     ui->setupUi(this);
+      ui->listView->setModel(afficherHistorique());
     QPixmap pix("C:/Users/ASUS/Desktop/proj-parental-monitoring-system-2A21-G6-main/application_version_beta/a.jpg");
     int w=ui->label_ph->width();
     int h=ui->label_ph->height();
@@ -130,6 +138,10 @@ void Animal::on_Ajouter_FICHE_clicked()
    else
      {Fiche_animal a(id,poid,taille,nbr,id_animal,date,etat,nom_malade);
 
+         a.ajouter();
+         addToHistory("ajout","d'une fiche animal",ui->lineEdit_id_Fiche_animal->text());
+          ui->tableView_2->setModel(a.afficher());
+          ui->listView->setModel(afficherHistorique());
 
 
           bool test=a.ajouter();
@@ -151,6 +163,11 @@ void Animal::on_Supprimer_fiche_clicked()
 {
     Fiche_animal a(1,1,1,1,1,"","","");
       a.supprimer()->removeRow(ui->tableView_2->currentIndex().row());
+      addToHistory("suppression","d'une fiche animal ",ui->tableView_2->currentIndex().data().toString());
+
+          ui->tableView_2->setModel(a.afficher());
+          ui->listView->setModel(afficherHistorique());
+
           ui->tableView_2->setModel(a.afficher());
 }
 
@@ -190,6 +207,12 @@ void Animal::on_Supprimer_clicked()
 {
     Anim a(1,1,1,"","","","");
     a.supprimer()->removeRow(ui->tableView->currentIndex().row());
+
+    addToHistory("suppression","d'un animal",ui->tableView->currentIndex().data().toString());
+
+
+        ui->tableView->setModel(a.afficher());
+        ui->listView->setModel(afficherHistorique());
 
         ui->tableView->setModel(a.afficher());
 }
@@ -263,6 +286,18 @@ void Animal::on_Ajouter_clicked()
            Anim a(id,age,prix,nom,race,sexe,date_achat);
 
 
+
+
+                a.ajouter();
+                addToHistory("ajout","d'un animal",ui->lineEdit_id->text());
+
+
+
+               ui->tableView->setModel(a.afficher());
+               ui->listView->setModel(afficherHistorique());
+           }
+
+
             bool test=a.ajouter();
           if(test)
            {    QMessageBox::information(nullptr, QObject::tr("ajout avec succes"),
@@ -279,7 +314,7 @@ void Animal::on_Ajouter_clicked()
 
 
 
-}
+
 
 void Animal::on_txt_recherche_animal_textChanged(const QString &arg1)
 {
@@ -351,3 +386,125 @@ void Animal::on_pushButton_im_clicked()
 
             delete document;
 }
+
+void Animal::on_pushButton_clicked()
+{
+    QString link="https://www.google.com";
+    QDesktopServices::openUrl(QUrl (link)) ;
+}
+//history
+
+void Animal::addToHistory(QString action, QString type, QString id)
+{
+
+    QSqlQuery query1;
+    query1.prepare("select * from history where (TO_CHAR(DATE_ACTIVITE_HISTORIQUE,'dd/mm/yyyy') = TO_CHAR(sysdate,'dd/mm/yyyy'))");
+    query1.exec();
+
+    QSqlQuery query,qry;
+    QString date=QDateTime::currentDateTime().toString("dddd, dd MMMM yyyy");
+    QString date1=QDateTime::currentDateTime().toString("dd/MM/yy");
+    QString time=QDateTime::currentDateTime().toString("hh:mm");
+    QString activity;
+
+    activity="\n    "+date1+"   -   "+time+" \t    "+ action +" "+type+" d'identifiant:  "+id+" \n";
+
+          query.prepare("INSERT INTO history (activity) VALUES (:activity)");
+          query.bindValue(":activity", activity);
+
+    query.exec();
+
+    activity="\n\t\t\t\t"+date+"\n";
+/*
+    if(!query1.next()) //if 1 ere activité du jour
+    {
+           query.prepare("INSERT INTO history (activity) VALUES (:activity)");
+           query.bindValue(":activity", activity);
+    qDebug() << "test11111";
+    query.exec();
+
+    }else
+    {
+        qDebug() << "test22222";
+
+           query.prepare("delete from history where (activity = :activity) ");
+           query.bindValue(":activity", activity);
+           query.exec();
+
+
+
+           qry.prepare("INSERT INTO history (activity,DATE_ACTIVITE_HISTORIQUE) VALUES (:activity, sysdate+(1/86400*60))");
+           qry.bindValue(":activity", activity);
+           query.exec();
+
+    }
+*/
+}
+
+
+
+//afficher historique
+
+QSqlQueryModel* Animal::afficherHistorique()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    QSqlQuery query;
+    QString historyType="";
+    switch (ui->comboBox->currentIndex())
+    {
+    case 1:  historyType="ajout";break;
+    case 2:  historyType="suppression";break;
+    }
+    //qDebug() << "test";
+         query.prepare("SELECT activity FROM history where activity like '%"+historyType+"%'  order by date_activite_historique desc");
+         query.exec();
+         model->setQuery(query);
+    return model;
+}
+
+
+
+
+bool Animal::historyDelete()
+{
+    QSqlQuery query;
+    int periode;
+
+    switch (ui->comboBox_2->currentIndex())
+    {
+    case 0: periode=1; break;
+    case 1: periode=7; break;
+    case 2: periode=28; break;
+    case 3: periode=999999; break;
+    }
+    //qDebug()<< periode;
+    QDateTime lastdate=QDateTime::currentDateTime().addDays(-periode);
+    //qDebug()<< lastdate;
+
+
+    query.prepare("Delete from history where date_activite_historique > :lastdate ");
+    query.bindValue(":lastdate",lastdate);
+    //qDebug() << delete_id;
+
+    return query.exec();
+}
+
+
+void Animal::on_comboBox_activated(const QString &arg1)
+{
+    ui->listView->setModel(afficherHistorique());
+
+}
+
+void Animal::on_pushButton_2_clicked()
+{
+    bool test=historyDelete();
+    if(test){
+        QMessageBox::information(this,"Success","suppression terminée");
+    ui->listView->setModel(afficherHistorique());
+    }
+    else{
+        QMessageBox::information(this,"Success","suppression non effectuée");
+    }
+}
+

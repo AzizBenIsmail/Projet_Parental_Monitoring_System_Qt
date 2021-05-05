@@ -21,6 +21,6 @@ void notification::notification_ajout(QString id)
     QString s = id;
     //notifyIcon->setVisible(1);
     notifyIcon->show();
-    notifyIcon->showMessage("notification"," Un nouveau abonné est ajouté !",QSystemTrayIcon::Information,15000);
+    notifyIcon->showMessage("notification"," Un problem tres urgent arduino !",QSystemTrayIcon::Information,15000);
 
 }

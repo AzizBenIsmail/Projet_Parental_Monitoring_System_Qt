@@ -547,3 +547,55 @@ void Securite::on_pushButton_2_clicked()
     statistics *g = new statistics(this);
     g->show();
 }
+
+void Securite::on_annulerv_2_clicked()
+{
+
+    QString strStream;
+            QTextStream out(&strStream);
+
+
+
+            const int rowCount = ui->affichev->model()->rowCount();
+            const int columnCount = ui->affichev->model()->columnCount();
+
+            out <<  "<html>\n"
+                "<head>\n"
+
+                "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                <<  QString("<title>%60 les postes</title>\n").arg("poste")
+                <<  "</head>\n"
+                "<body bgcolor=#ffffff link=#5000A0>\n"
+                "<table border=1 cellspacing=0 cellpadding=2>\n";
+            out << "<thead><tr bgcolor=#f0f0f0>";
+            for (int column = 0; column < columnCount; column++)
+                if (! ui->affichev->isColumnHidden(column))
+                    out << QString("<th>%1</th>").arg(ui->affichev->model()->headerData(column, Qt::Horizontal).toString());
+            out << "</tr></thead>\n";
+
+            for (int row = 0; row < rowCount; row++) {
+                out << "<tr>";
+                for (int column = 0; column < columnCount; column++) {
+                    if (!ui->affichev->isColumnHidden(column)) {
+                        QString data = ui->affichev->model()->data(ui->affichev->model()->index(row, column)).toString().simplified();
+                        out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                    }
+                }
+                out << "</tr>\n";
+            }
+            out <<  "</table>\n"
+                "</body>\n"
+                "</html>\n";
+
+            QTextDocument *document = new QTextDocument();
+            document->setHtml(strStream);
+
+            QPrinter printer;
+
+            QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+            if (dialog->exec() == QDialog::Accepted) {
+                document->print(&printer);
+            }
+
+            delete document;
+}

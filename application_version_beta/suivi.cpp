@@ -171,7 +171,7 @@ QSqlQueryModel*  suivi::test()
 QSqlQueryModel *suivi::afficher_poidsideal()
 {
   QSqlQueryModel *model=new QSqlQueryModel();
-        model->setQuery("SELECT * FROM suivi WHERE (poid/(taille*taille)=    )");
+        model->setQuery("SELECT * FROM suivi WHERE (poid/(taille*taille)=1)");
         model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifain"));
         model->setHeaderData(1, Qt::Horizontal, QObject::tr("taille"));
         model->setHeaderData(2, Qt::Horizontal, QObject::tr("poid"));

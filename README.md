@@ -37,3 +37,16 @@
 ## Thématiques
 ### Sujets Proposés [Smart Tunisia]
 ![image](https://user-images.githubusercontent.com/61393700/221417653-2a069fd1-549c-49b4-b131-2aa2ed96d59f.png)
+
+### Notes 
+## Validation 1
+![image](https://user-images.githubusercontent.com/61393700/221417897-50351736-3b86-4f99-aa59-f213440d8f0b.png)
+
+## Validation 2
+![image](https://user-images.githubusercontent.com/61393700/221417884-d1c47df5-18ea-4762-9dc0-0751a9b85fc1.png)
+
+## Validation 3
+![image](https://user-images.githubusercontent.com/61393700/221417855-993ce81f-1ee5-4ef9-b551-c8bfa564aea4.png)
+
+## Validation Commerciale
+![image](https://user-images.githubusercontent.com/61393700/221417913-75bc9b47-b9bc-47b2-8dce-193c5a6ef3c6.png)

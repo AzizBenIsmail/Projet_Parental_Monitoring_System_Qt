@@ -1,11 +1,17 @@
 # proj-parental-monitoring-system-2A21-G6
 ![GitHub repo size](https://img.shields.io/github/repo-size/AzizBenIsmail/proj-parental-monitoring-system-2A21-G6)
-![WhatsApp Image 2023-03-11 at 12 02 07 (2)](https://user-images.githubusercontent.com/61393700/224493179-aa56c2bf-8c71-4c44-947c-994997f1881e.jpeg)
-![WhatsApp Image 2023-03-11 at 12 02 07 (7)](https://user-images.githubusercontent.com/61393700/224493192-73cc8fae-323c-4d3f-a1e8-808a29b71373.jpeg)
-![WhatsApp Image 2023-03-11 at 12 02 07 (3)](https://user-images.githubusercontent.com/61393700/224493241-52f4b75a-0639-4b73-b33c-ee374b1a0dd6.jpeg)
-![Uploading WhatsApp Image 2023-03-11 at 12.02.07 (1).jpeg…]()
-
 ![image](https://user-images.githubusercontent.com/61393700/221417298-42e46de5-06e7-4010-a5a7-f55ca84a5b9a.png)
+![WhatsApp Image 2023-03-11 at 12 02 07 (7)](https://user-images.githubusercontent.com/61393700/224493299-f72cdf68-e9a6-4ce9-b992-484c6f2100ca.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (2)](https://user-images.githubusercontent.com/61393700/224493304-8a7c180b-0f60-4b32-ab16-e357f570c873.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (3)](https://user-images.githubusercontent.com/61393700/224493308-8864204c-733f-4b43-b95b-1cc1c2d0e3b2.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (1)](https://user-images.githubusercontent.com/61393700/224493311-081202b5-28fa-470d-ae6d-7d7e483d60db.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07](https://user-images.githubusercontent.com/61393700/224493314-21c822fe-8946-4bd9-bab4-f5fb32e04eaf.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (4)](https://user-images.githubusercontent.com/61393700/224493319-a3657ae8-8548-4383-8ad3-5df4c1bcbd82.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (10)](https://user-images.githubusercontent.com/61393700/224493322-87434565-0799-42dc-9bb4-2ee44d44e4da.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (8)](https://user-images.githubusercontent.com/61393700/224493325-c610648c-1999-4225-a305-49cf8afdec7d.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (5)](https://user-images.githubusercontent.com/61393700/224493329-badf95aa-b726-483e-8569-d2b0c1520554.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (6)](https://user-images.githubusercontent.com/61393700/224493330-2abb9c9c-fc1d-4754-a255-eeacb34e37a7.jpeg)
+![WhatsApp Image 2023-03-11 at 12 02 07 (9)](https://user-images.githubusercontent.com/61393700/224493344-cac4bdae-08f9-4e9e-ae49-3bc81303ed56.jpeg)
 ## Planning 
 ![image](https://user-images.githubusercontent.com/61393700/221417329-79d3e020-7f4e-4333-bec4-2c80858be838.png)
 ## Compétences

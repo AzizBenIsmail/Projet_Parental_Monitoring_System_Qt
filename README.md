@@ -1,5 +1,7 @@
 # proj-parental-monitoring-system-2A21-G6
 ![GitHub repo size](https://img.shields.io/github/repo-size/AzizBenIsmail/proj-parental-monitoring-system-2A21-G6)
+![WhatsApp Image 2023-03-11 at 12 02 07 (3)](https://user-images.githubusercontent.com/61393700/224493107-0498e4eb-8d9e-4a11-af1a-dce025383b3f.jpeg)
+
 ![image](https://user-images.githubusercontent.com/61393700/221417298-42e46de5-06e7-4010-a5a7-f55ca84a5b9a.png)
 ## Planning 
 ![image](https://user-images.githubusercontent.com/61393700/221417329-79d3e020-7f4e-4333-bec4-2c80858be838.png)

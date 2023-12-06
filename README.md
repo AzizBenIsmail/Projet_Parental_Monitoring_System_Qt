@@ -1,5 +1,8 @@
 # proj-parental-monitoring-system-2A21-G6
 ![GitHub repo size](https://img.shields.io/github/repo-size/AzizBenIsmail/proj-parental-monitoring-system-2A21-G6)
+"First Path" est une application desktop née le 6 février 2021 par 6 ingénieurs afin de réaliser 6 modules ( contact , animaux de compagnie, cuisine, santé , programme et habillage ) . 
+Tout d'abord cette application peut ordonner les employés tels que les enseignants qu'ils ont un programme bien détaillé ou on trouve Les activités destinées aux enfants ,ensuite on peut classer ,calculer et contrôler le stock qui contient des différents produits on cite par exemple: médicaments et ingrédients alimentaires. En outre contrôler les enfants d’après leurs dossiers médicales pour bien  maitriser  leurs repas et leur médicaments .Ainsi contrôler leurs animaux de compagnie par le biais des suivis médicaux pour assurer la sécurité. De plus , Cette application  organise l’habillage des petits gamins et met les parents en contact direct aves les boutiques destinés. 
+
 ![image](https://user-images.githubusercontent.com/61393700/221417298-42e46de5-06e7-4010-a5a7-f55ca84a5b9a.png)
 ![WhatsApp Image 2023-03-11 at 12 02 07 (7)](https://user-images.githubusercontent.com/61393700/224493299-f72cdf68-e9a6-4ce9-b992-484c6f2100ca.jpeg)
 ![WhatsApp Image 2023-03-11 at 12 02 07 (2)](https://user-images.githubusercontent.com/61393700/224493304-8a7c180b-0f60-4b32-ab16-e357f570c873.jpeg)
